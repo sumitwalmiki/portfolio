@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import {
   ArrowRight,
-  Download,
   Play,
   Code2,
   Zap,
@@ -16,6 +15,7 @@ import {
   Globe,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import DownloadResumeButton from "@/ui/components/DownloadResumeButton";
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false);
@@ -249,15 +249,7 @@ export default function Hero() {
                 View My Work
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
-
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-2 border-slate-300 hover:border-slate-400 hover:bg-slate-50 px-8 py-4 rounded-lg shadow-lg transition-all duration-300 bg-white"
-              >
-                <Download className="w-5 h-5 mr-2" />
-                Download Resume
-              </Button>
+              <DownloadResumeButton />
             </div>
           </div>
 
