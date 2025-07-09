@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 
-const RESUME_URL = "/assets/resume.pdf";
+const RESUME_URL = "SumitWalmikiResume.pdf";
 
 const DownloadResumeButton: React.FC = () => {
   const handleClick = (e: React.MouseEvent) => {
