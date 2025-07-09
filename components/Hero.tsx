@@ -1,107 +1,253 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import Image from "next/image"
-import { ArrowRight, Download, Play, Code2, Zap, Star, Users, Award } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { useState, useEffect } from "react";
+import {
+  ArrowRight,
+  Download,
+  Play,
+  Code2,
+  Zap,
+  Star,
+  Users,
+  Award,
+  Terminal,
+  Cpu,
+  Database,
+  Globe,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function Hero() {
-  const [isVisible, setIsVisible] = useState(false)
-  const [currentTech, setCurrentTech] = useState(0)
+  const [isVisible, setIsVisible] = useState(false);
+  const [currentTech, setCurrentTech] = useState(0);
+  const [typedText, setTypedText] = useState("");
+  const [currentRole, setCurrentRole] = useState(0);
 
-  useEffect(() => {
-    setIsVisible(true)
-
-    const interval = setInterval(() => {
-      setCurrentTech((prev) => (prev + 1) % 6)
-    }, 2000)
-
-    return () => clearInterval(interval)
-  }, [])
+  const roles = [
+    "Full-Stack Developer",
+    "React Specialist",
+    "Next.js Specialist",
+    "API Developer",
+    "Front end Engineer",
+    "Backend Engineer",
+    "Software Engineer",
+    "Web Developer",
+    "Problem Solver",
+  ];
 
   const techStack = [
-    { name: "JavaScript", icon: "🟨", color: "text-yellow-600" },
-    { name: "Python", icon: "🐍", color: "text-green-600" },
-    { name: "React", icon: "⚛️", color: "text-blue-600" },
-    { name: "Node.js", icon: "🟢", color: "text-green-500" },
-    { name: "Cloud", icon: "☁️", color: "text-blue-500" },
-    { name: "AI/ML", icon: "🤖", color: "text-purple-600" },
-  ]
+    {
+      name: "JavaScript",
+      icon: "🟨",
+      color: "text-yellow-600",
+      bg: "bg-yellow-100",
+    },
+    { name: "Python", icon: "🐍", color: "text-green-600", bg: "bg-green-100" },
+    { name: "React", icon: "⚛️", color: "text-blue-600", bg: "bg-blue-100" },
+    {
+      name: "Node.js",
+      icon: "🟢",
+      color: "text-green-500",
+      bg: "bg-green-100",
+    },
+    { name: "AWS", icon: "☁️", color: "text-orange-500", bg: "bg-orange-100" },
+    {
+      name: "AI/ML",
+      icon: "🤖",
+      color: "text-purple-600",
+      bg: "bg-purple-100",
+    },
+  ];
 
   const quickStats = [
-    { icon: Code2, number: "4+", label: "Years", color: "text-blue-600" },
-    { icon: Star, number: "50+", label: "Projects", color: "text-yellow-600" },
-    { icon: Users, number: "10+", label: "Technologies", color: "text-green-600" },
-    { icon: Award, number: "100%", label: "Success Rate", color: "text-purple-600" },
-  ]
+    {
+      icon: Code2,
+      number: "4+",
+      label: "Years Experience",
+      color: "text-blue-600",
+      bg: "bg-blue-100",
+    },
+    {
+      icon: Star,
+      number: "50+",
+      label: "Projects Delivered",
+      color: "text-yellow-600",
+      bg: "bg-yellow-100",
+    },
+    {
+      icon: Users,
+      number: "15+",
+      label: "Technologies",
+      color: "text-green-600",
+      bg: "bg-green-100",
+    },
+    {
+      icon: Award,
+      number: "100%",
+      label: "Client Satisfaction",
+      color: "text-purple-600",
+      bg: "bg-purple-100",
+    },
+  ];
+
+  const codeSnippet = `const developer = {
+  name: "Sumit Walmiki",
+  role: "Full-Stack Engineer",
+  experience: "4+ years",
+  specialties: ["React", "Node.js", "Python"],
+  passion: "Building scalable solutions",
+  availability: "Open to opportunities"
+};
+
+// Ready to contribute to your team! 🚀`;
+
+  useEffect(() => {
+    setIsVisible(true);
+
+    // Tech stack rotation
+    const techInterval = setInterval(() => {
+      setCurrentTech((prev) => (prev + 1) % techStack.length);
+    }, 2000);
+
+    // Role typing effect
+    const roleInterval = setInterval(() => {
+      setCurrentRole((prev) => (prev + 1) % roles.length);
+    }, 3000);
+
+    // Typing effect for current role
+    const currentRoleText = roles[currentRole];
+    let i = 0;
+    const typingInterval = setInterval(() => {
+      if (i < currentRoleText.length) {
+        setTypedText(currentRoleText.slice(0, i + 1));
+        i++;
+      } else {
+        clearInterval(typingInterval);
+        setTimeout(() => {
+          const deleteInterval = setInterval(() => {
+            if (i > 0) {
+              setTypedText(currentRoleText.slice(0, i - 1));
+              i--;
+            } else {
+              clearInterval(deleteInterval);
+            }
+          }, 50);
+        }, 1500);
+      }
+    }, 100);
+
+    return () => {
+      clearInterval(techInterval);
+      clearInterval(roleInterval);
+      clearInterval(typingInterval);
+    };
+  }, [currentRole]);
 
   const handleNavClick = (href: string) => {
-    const element = document.querySelector(href)
+    const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" })
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
-  }
+  };
 
   return (
-    <section id="home" className="min-h-screen flex items-center relative overflow-hidden bg-slate-50">
-      {/* Optimized Background Pattern */}
-      <div className="absolute inset-0 opacity-[0.02]">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,_rgb(0_0_0)_1px,_transparent_0)] bg-[length:24px_24px]"></div>
+    <section
+      id="home"
+      className="min-h-screen flex items-center relative overflow-hidden bg-slate-50"
+    >
+      {/* Animated Background Grid */}
+      <div className="absolute inset-0 opacity-[0.03]">
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,_transparent_24px,_rgba(0,0,0,0.05)_25px,_rgba(0,0,0,0.05)_26px,_transparent_27px),_linear-gradient(rgba(0,0,0,0.05)_24px,_transparent_25px,_transparent_26px,_rgba(0,0,0,0.05)_27px)] bg-[length:25px_25px]"></div>
       </div>
 
-      {/* Floating Elements - Reduced for performance */}
+      {/* Floating Tech Icons */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-20 w-2 h-2 bg-blue-400 rounded-full animate-pulse opacity-20"></div>
+        <div className="absolute top-20 left-[25%] w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center animate-float opacity-60">
+          <Code2 className="w-6 h-6 text-blue-600" />
+        </div>
         <div
-          className="absolute top-40 right-32 w-2 h-2 bg-purple-400 rounded-full animate-pulse opacity-20"
+          className="absolute top-32 right-[20%] w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center animate-float opacity-60"
           style={{ animationDelay: "1s" }}
-        ></div>
+        >
+          <Database className="w-6 h-6 text-green-600" />
+        </div>
         <div
-          className="absolute bottom-40 left-32 w-2 h-2 bg-green-400 rounded-full animate-pulse opacity-20"
+          className="absolute bottom-32 left-[30%] w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center animate-float opacity-60"
           style={{ animationDelay: "2s" }}
-        ></div>
+        >
+          <Cpu className="w-6 h-6 text-purple-600" />
+        </div>
+        <div
+          className="absolute bottom-20 right-[25%] w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center animate-float opacity-60"
+          style={{ animationDelay: "0.5s" }}
+        >
+          <Globe className="w-6 h-6 text-orange-600" />
+        </div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div className={`space-y-8 ${isVisible ? "animate-slide-in-left" : "opacity-0"}`}>
+          <div
+            className={`space-y-8 ${
+              isVisible ? "animate-slide-in-left" : "opacity-0"
+            }`}
+          >
             {/* Status Badge */}
             <div className="inline-flex items-center space-x-2 bg-green-50 border border-green-200 px-4 py-2 rounded-full">
               <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-              <span className="text-sm font-medium text-green-800">Open to opportunities at top tech companies</span>
+              <span className="text-sm font-medium text-green-800">
+                Available for immediate opportunities
+              </span>
             </div>
 
-            {/* Main Heading */}
+            {/* Main Heading with Typing Effect */}
             <div className="space-y-4">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-slate-900">
                 Hi, I'm <span className="text-blue-600">Sumit Walmiki</span>
               </h1>
-              <h2 className="text-2xl sm:text-3xl font-semibold text-slate-700">Full-Stack Software Engineer</h2>
-              <div className="flex items-center space-x-2 text-lg text-slate-600">
-                <span>Passionate about</span>
-                <span className={`font-mono font-bold transition-colors duration-500 ${techStack[currentTech].color}`}>
-                  {techStack[currentTech].icon} {techStack[currentTech].name}
-                </span>
+              <div className="h-15 flex items-center">
+                <h2 className="text-2xl sm:text-3xl font-semibold text-slate-700">
+                  {typedText}
+                  <span className="animate-pulse text-blue-600">|</span>
+                </h2>
               </div>
             </div>
 
             {/* Description */}
-            <p className="text-xl text-slate-600 leading-relaxed max-w-2xl">
-              I build scalable, high-performance applications using modern technologies. From distributed systems to
-              user-facing products, I love solving complex problems and creating impactful solutions.
+            <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
+              I build scalable, high-performance applications using modern
+              technologies. From distributed systems to user-facing products, I
+              love solving complex problems and creating impactful solutions.
             </p>
+
+            {/* Current Tech Focus */}
+            <div className="flex items-center space-x-4">
+              <span className="text-slate-600 font-medium">
+                Passionate about
+              </span>
+              <div
+                className={`flex items-center space-x-2 px-3 py-2 ${techStack[currentTech].bg} rounded-lg transition-all duration-500`}
+              >
+                <span className="text-2xl">{techStack[currentTech].icon}</span>
+                <span
+                  className={`font-semibold ${techStack[currentTech].color}`}
+                >
+                  {techStack[currentTech].name}
+                </span>
+              </div>
+            </div>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
                 size="lg"
                 onClick={() => handleNavClick("#projects")}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group"
               >
-                <Play className="w-5 h-5 mr-2" />
+                <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
                 View My Work
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
 
               <Button
@@ -113,66 +259,105 @@ export default function Hero() {
                 Download Resume
               </Button>
             </div>
+          </div>
 
-            {/* Tech Stack */}
-            <div className="space-y-3">
-              <p className="text-sm font-semibold text-slate-500 uppercase tracking-wide">Core Technologies</p>
-              <div className="flex flex-wrap gap-3">
-                {["JavaScript", "Python", "React", "Node.js", "AWS", "Docker"].map((tech) => (
-                  <span
-                    key={tech}
-                    className="px-3 py-2 bg-white border border-slate-200 rounded-lg text-sm font-medium text-slate-700 hover:border-slate-300 hover:shadow-md transition-all duration-200"
-                  >
-                    {tech}
-                  </span>
-                ))}
+          {/* Right Content - Code Showcase */}
+          <div
+            className={`relative ${
+              isVisible ? "animate-slide-in-right" : "opacity-0"
+            }`}
+          >
+            {/* Code Terminal */}
+            <div className="bg-slate-900 rounded-2xl shadow-2xl overflow-hidden border border-slate-700">
+              {/* Terminal Header */}
+              <div className="flex items-center justify-between px-4 py-3 bg-slate-800 border-b border-slate-700">
+                <div className="flex items-center space-x-2">
+                  <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                  <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                </div>
+                <div className="flex items-center space-x-2 text-slate-400 text-sm">
+                  <Terminal className="w-4 h-4" />
+                  <span>developer-profile.js</span>
+                </div>
+                <div className="w-16"></div>
+              </div>
+
+              {/* Code Content */}
+              <div className="p-6 font-mono text-sm">
+                <pre className="text-slate-300 leading-relaxed">
+                  <code>
+                    <span className="text-purple-400">const</span>{" "}
+                    <span className="text-blue-400">developer</span> = {"{"}
+                    {"\n"} <span className="text-green-400">name</span>:{" "}
+                    <span className="text-yellow-400">"Sumit Walmiki"</span>,
+                    {"\n"} <span className="text-green-400">role</span>:{" "}
+                    <span className="text-yellow-400">
+                      "Full-Stack Engineer"
+                    </span>
+                    ,{"\n"} <span className="text-green-400">experience</span>:{" "}
+                    <span className="text-yellow-400">"4+ years"</span>,{"\n"}{" "}
+                    <span className="text-green-400">specialties</span>: [{"\n"}{" "}
+                    <span className="text-yellow-400">"React"</span>,{" "}
+                    <span className="text-yellow-400">"Next.js"</span>,{" "}
+                    <span className="text-yellow-400">"API Development"</span>
+                    {"\n"} ],
+                    {"\n"} <span className="text-green-400">passion</span>:{" "}
+                    <span className="text-yellow-400">
+                      "Building scalable solutions"
+                    </span>
+                    ,{"\n"} <span className="text-green-400">availability</span>
+                    :{" "}
+                    <span className="text-yellow-400">
+                      "Open to opportunities"
+                    </span>
+                    {"\n"}
+                    {"}"};{"\n"}
+                    {"\n"}
+                    <span className="text-slate-500">
+                      // Ready to contribute to your team! 🚀
+                    </span>
+                  </code>
+                </pre>
+              </div>
+
+              {/* Terminal Footer */}
+              <div className="px-4 py-2 bg-slate-800 border-t border-slate-700 flex items-center justify-between text-xs text-slate-400">
+                <span>✓ No syntax errors</span>
+                <span>Ready to deploy</span>
               </div>
             </div>
 
-            {/* Quick Stats */}
-            <div className="grid grid-cols-4 gap-4 pt-4">
-              {quickStats.map((stat, index) => (
-                <div
-                  key={stat.label}
-                  className={`text-center ${isVisible ? "animate-scale-in" : "opacity-0"}`}
-                  style={{ animationDelay: `${600 + index * 100}ms` }}
-                >
-                  <stat.icon className={`w-6 h-6 ${stat.color} mx-auto mb-2`} />
-                  <div className="text-2xl font-bold text-slate-900">{stat.number}</div>
-                  <div className="text-xs text-slate-600">{stat.label}</div>
+            {/* Floating Achievement Cards */}
+            <div className="absolute -top-4 -right-4 bg-white p-4 rounded-xl shadow-lg border border-slate-200 animate-float">
+              <div className="flex items-center space-x-2">
+                <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">
+                  <Award className="w-4 h-4 text-green-600" />
                 </div>
-              ))}
+                <div>
+                  <div className="text-sm font-semibold text-slate-900">
+                    Top Performer
+                  </div>
+                  <div className="text-xs text-slate-600">
+                    100% Success Rate
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
 
-          {/* Right Content */}
-          <div className={`relative ${isVisible ? "animate-slide-in-right" : "opacity-0"}`}>
-            {/* Main Profile */}
-            <div className="relative">
-              <div className="bg-white rounded-2xl p-8 shadow-xl border border-slate-200">
-                <div className="relative">
-                  <Image
-                    src="/placeholder.svg?height=400&width=400"
-                    alt="Sumit Walmiki - Full-Stack Software Engineer"
-                    width={400}
-                    height={400}
-                    className="rounded-xl shadow-lg"
-                    priority
-                    placeholder="blur"
-                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R+Sh7tZdZbvqrttZ9VLNpmdOvBBaasdf//Z"
-                  />
-
-                  {/* Floating Tech Cards */}
-                  <div className="absolute -top-4 -right-4 bg-white p-3 rounded-xl shadow-lg border border-slate-200 animate-float">
-                    <Code2 className="w-6 h-6 text-blue-600" />
+            <div
+              className="absolute -bottom-4 -left-4 bg-white p-4 rounded-xl shadow-lg border border-slate-200 animate-float"
+              style={{ animationDelay: "1s" }}
+            >
+              <div className="flex items-center space-x-2">
+                <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
+                  <Zap className="w-4 h-4 text-blue-600" />
+                </div>
+                <div>
+                  <div className="text-sm font-semibold text-slate-900">
+                    Fast Delivery
                   </div>
-
-                  <div
-                    className="absolute -bottom-4 -left-4 bg-white p-3 rounded-xl shadow-lg border border-slate-200 animate-float"
-                    style={{ animationDelay: "1s" }}
-                  >
-                    <Zap className="w-6 h-6 text-green-600" />
-                  </div>
+                  <div className="text-xs text-slate-600">On-time Projects</div>
                 </div>
               </div>
             </div>
@@ -184,12 +369,12 @@ export default function Hero() {
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <button
           onClick={() => handleNavClick("#about")}
-          className="w-6 h-10 border-2 border-slate-400 rounded-full flex justify-center hover:border-slate-600 transition-colors"
+          className="w-6 h-10 border-2 border-slate-400 rounded-full flex justify-center hover:border-slate-600 transition-colors group"
           aria-label="Scroll to about section"
         >
-          <div className="w-1 h-3 bg-slate-400 rounded-full mt-2 animate-pulse"></div>
+          <div className="w-1 h-3 bg-slate-400 rounded-full mt-2 animate-pulse group-hover:bg-slate-600"></div>
         </button>
       </div>
     </section>
-  )
+  );
 }
