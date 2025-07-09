@@ -6,8 +6,6 @@ import {
   Play,
   Code2,
   Zap,
-  Star,
-  Users,
   Award,
   Terminal,
   Cpu,
@@ -58,48 +56,6 @@ export default function Hero() {
       bg: "bg-purple-100",
     },
   ];
-
-  const quickStats = [
-    {
-      icon: Code2,
-      number: "4+",
-      label: "Years Experience",
-      color: "text-blue-600",
-      bg: "bg-blue-100",
-    },
-    {
-      icon: Star,
-      number: "50+",
-      label: "Projects Delivered",
-      color: "text-yellow-600",
-      bg: "bg-yellow-100",
-    },
-    {
-      icon: Users,
-      number: "15+",
-      label: "Technologies",
-      color: "text-green-600",
-      bg: "bg-green-100",
-    },
-    {
-      icon: Award,
-      number: "100%",
-      label: "Client Satisfaction",
-      color: "text-purple-600",
-      bg: "bg-purple-100",
-    },
-  ];
-
-  const codeSnippet = `const developer = {
-  name: "Sumit Walmiki",
-  role: "Full-Stack Engineer",
-  experience: "4+ years",
-  specialties: ["React", "Node.js", "Python"],
-  passion: "Building scalable solutions",
-  availability: "Open to opportunities"
-};
-
-// Ready to contribute to your team! 🚀`;
 
   useEffect(() => {
     setIsVisible(true);
@@ -162,7 +118,7 @@ export default function Hero() {
 
       {/* Floating Tech Icons */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-[25%] w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center animate-float opacity-60">
+        <div className="absolute top-20 left-[26%] w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center animate-float opacity-60">
           <Code2 className="w-6 h-6 text-blue-600" />
         </div>
         <div
