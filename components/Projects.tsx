@@ -177,7 +177,7 @@ export default function Projects() {
               <Filter className="w-5 h-5 text-slate-600" />
               <span className="text-sm font-medium text-slate-700">Portfolio Showcase</span>
             </div>
-            <h2 className="text-fluid-lg font-bold text-slate-900 mb-4">
+            <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-4">
               Featured <span className="text-gradient-primary">Projects</span>
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
@@ -369,7 +369,7 @@ export default function Projects() {
                         <span className="text-xs text-slate-500 font-medium">{project.year}</span>
                       </div>
 
-                      <h3 className="text-lg font-bold text-slate-900 mb-2 line-clamp-2">{project.title}</h3>
+                      <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl font-bold text-slate-900 mb-2 line-clamp-2">{project.title}</h3>
                       <p className="text-slate-600 text-sm mb-4 leading-relaxed line-clamp-3">{project.description}</p>
 
                       {/* Tags */}

@@ -139,7 +139,7 @@ export default function Skills() {
               <Zap className="w-5 h-5 text-slate-600" />
               <span className="text-sm font-medium text-slate-700">Technical Expertise & Growth</span>
             </div>
-            <h2 className="text-fluid-lg font-bold text-slate-900 mb-4">
+            <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-4">
               Skills & <span className="text-gradient-primary">Technologies</span>
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
@@ -186,7 +186,7 @@ export default function Skills() {
                       <div className="flex items-center space-x-3">
                         <span className="text-2xl">{skill.icon}</span>
                         <div>
-                          <h3 className="font-semibold text-slate-900">{skill.name}</h3>
+                          <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl font-semibold text-slate-900">{skill.name}</h3>
                           <p className="text-sm text-slate-600">{skill.experience}</p>
                         </div>
                       </div>

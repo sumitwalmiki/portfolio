@@ -116,7 +116,7 @@ export default function About() {
               <Coffee className="w-5 h-5 text-amber-600" />
               <span className="text-sm font-medium text-slate-700">Driven by curiosity & innovation</span>
             </div>
-            <h2 className="text-fluid-lg font-bold text-slate-900 mb-4">
+            <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-4">
               About <span className="text-gradient-primary">Me</span>
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
@@ -136,7 +136,7 @@ export default function About() {
                 <div className={`inline-flex p-3 rounded-xl bg-white shadow-professional mb-4`}>
                   <highlight.icon className={`w-8 h-8 ${highlight.color}`} />
                 </div>
-                <h3 className={`text-2xl font-bold text-slate-900 mb-2`}>{highlight.title}</h3>
+                <h3 className={`text-base xs:text-lg sm:text-xl md:text-2xl font-bold text-slate-900 mb-2`}>{highlight.title}</h3>
                 <p className="text-slate-600 font-medium">{highlight.subtitle}</p>
               </div>
             ))}
@@ -166,7 +166,7 @@ export default function About() {
             <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-professional-xl border border-slate-200">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div className="space-y-6">
-                  <h3 className="text-3xl font-bold text-slate-900 mb-4">
+                  <h3 className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-bold text-slate-900 mb-4">
                     {tabContent[activeTab as keyof typeof tabContent].title}
                   </h3>
                   <p className="text-lg text-slate-600 leading-relaxed">

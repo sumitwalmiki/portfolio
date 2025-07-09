@@ -210,8 +210,8 @@ export default function Contact() {
               <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
               <span className="text-sm font-medium text-slate-700">Available for new opportunities</span>
             </div>
-            <h2 className="text-fluid-lg font-bold text-slate-900 mb-4">
-              Let's <span className="text-gradient-primary">Connect</span>
+            <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-4">
+              Contact <span className="text-blue-600">Me</span>
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
               Ready to discuss your next project or explore opportunities? I'd love to hear from you!

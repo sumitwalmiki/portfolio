@@ -180,7 +180,7 @@ export default function Blog() {
                 Technical Writing & Insights
               </span>
             </div>
-            <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">
+            <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-4">
               Blog & <span className="text-blue-600">Articles</span>
             </h2>
             <div className="w-24 h-1 bg-blue-500 mx-auto mb-6"></div>

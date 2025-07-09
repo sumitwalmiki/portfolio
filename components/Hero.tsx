@@ -159,11 +159,11 @@ export default function Hero() {
 
             {/* Main Heading with Typing Effect */}
             <div className="space-y-4">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-slate-900">
+              <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-slate-900">
                 Hi, I'm <span className="text-blue-600">Sumit Walmiki</span>
               </h1>
-              <div className="h-15 flex items-center">
-                <h2 className="text-2xl sm:text-3xl font-semibold text-slate-700">
+              <div className="flex items-center min-h-[2.5rem]">
+                <h2 className="text-base xs:text-lg sm:text-2xl md:text-3xl font-semibold text-slate-700">
                   {typedText}
                   <span className="animate-pulse text-blue-600">|</span>
                 </h2>
