@@ -293,7 +293,7 @@ export default function Hero() {
                     <span className="text-yellow-400">"Sumit Walmiki"</span>,
                     {"\n"} <span className="text-green-400">role</span>:{" "}
                     <span className="text-yellow-400">
-                      "Full-Stack Engineer"
+                      "Software Developer"
                     </span>
                     ,{"\n"} <span className="text-green-400">experience</span>:{" "}
                     <span className="text-yellow-400">"4+ years"</span>,{"\n"}{" "}
