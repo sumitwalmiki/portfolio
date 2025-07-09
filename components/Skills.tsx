@@ -124,7 +124,7 @@ export default function Skills() {
   }
 
   return (
-    <section id="skills" className="py-20 bg-slate-50 relative overflow-hidden">
+    <section id="skills" className="py-20 bg-slate-50 relative overflow-x-hidden w-full">
       {/* Background Elements */}
       <div className="absolute top-20 left-20 w-72 h-72 bg-blue-100 rounded-full blur-3xl opacity-30"></div>
       <div className="absolute bottom-20 right-20 w-72 h-72 bg-green-100 rounded-full blur-3xl opacity-30"></div>
@@ -175,11 +175,11 @@ export default function Skills() {
             <div
               className={`bg-white rounded-2xl p-8 lg:p-12 shadow-professional-xl border-2 ${skillCategories[activeCategory].borderColor}`}
             >
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-full">
                 {skillCategories[activeCategory].skills.map((skill, index) => (
                   <div
                     key={skill.name}
-                    className={`bg-slate-50 rounded-xl p-6 border border-slate-200 card-hover ${isVisible ? "animate-scale-in" : "opacity-0"}`}
+                    className={`bg-slate-50 rounded-xl p-4 sm:p-6 border border-slate-200 card-hover w-full max-w-full ${isVisible ? "animate-scale-in" : "opacity-0"}`}
                     style={{ animationDelay: `${index * 100}ms` }}
                   >
                     <div className="flex items-center justify-between mb-4">
