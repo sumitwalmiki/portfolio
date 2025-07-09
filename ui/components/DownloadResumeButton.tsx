@@ -11,7 +11,7 @@ const DownloadResumeButton: React.FC = () => {
     // Download
     const link = document.createElement("a");
     link.href = RESUME_URL;
-    link.download = "resume.pdf";
+    link.download = "SumitWalmikiResume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
