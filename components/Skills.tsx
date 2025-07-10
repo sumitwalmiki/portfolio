@@ -135,33 +135,33 @@ export default function Skills() {
         >
           {/* Header */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center space-x-2 bg-white border border-slate-200 px-4 py-2 rounded-full mb-6 shadow-professional">
-              <Zap className="w-5 h-5 text-slate-600" />
-              <span className="text-sm font-medium text-slate-700">Technical Expertise & Growth</span>
+            <div className="inline-flex items-center space-x-2 bg-white border border-slate-200 px-3 xxs:px-4 py-2 rounded-full mb-6 shadow-professional">
+              <Zap className="w-4 xxs:w-5 h-4 xxs:h-5 text-slate-600" />
+              <span className="text-xs xxs:text-sm font-medium text-slate-700">Technical Expertise & Growth</span>
             </div>
-            <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-4">
+            <h2 className="text-xl xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-4">
               Skills & <span className="text-gradient-primary">Technologies</span>
             </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base xxs:text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
               Comprehensive expertise across the full technology stack, with a focus on modern, scalable solutions.
             </p>
           </div>
 
           {/* Category Navigation */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
+          <div className="flex flex-wrap justify-center gap-2 xxs:gap-4 mb-12">
             {skillCategories.map((category, index) => (
               <button
                 key={index}
                 onClick={() => setActiveCategory(index)}
-                className={`flex items-center space-x-3 px-6 py-4 rounded-xl font-medium transition-all duration-300 card-hover ${
+                className={`flex items-center space-x-2 xxs:space-x-3 px-4 xxs:px-6 py-3 xxs:py-4 rounded-xl font-medium transition-all duration-300 card-hover ${
                   activeCategory === index
                     ? `${category.bgColor} ${category.borderColor} border-2 shadow-professional-lg`
                     : "bg-white border border-slate-200 hover:border-slate-300 text-slate-700 shadow-professional"
                 }`}
               >
-                <category.icon className={`w-6 h-6 ${activeCategory === index ? category.color : "text-slate-600"}`} />
+                <category.icon className={`w-5 xxs:w-6 h-5 xxs:h-6 ${activeCategory === index ? category.color : "text-slate-600"}`} />
                 <div className="text-left">
-                  <div className={`font-semibold ${activeCategory === index ? category.color : "text-slate-900"}`}>
+                  <div className={`font-semibold text-xs xxs:text-base ${activeCategory === index ? category.color : "text-slate-900"}`}>
                     {category.title}
                   </div>
                   <div className="text-xs text-slate-600">{category.description}</div>
@@ -173,25 +173,25 @@ export default function Skills() {
           {/* Active Category Skills */}
           <div className="max-w-6xl mx-auto mb-16">
             <div
-              className={`bg-white rounded-2xl p-8 lg:p-12 shadow-professional-xl border-2 ${skillCategories[activeCategory].borderColor}`}
+              className={`bg-white rounded-2xl p-4 xxs:p-8 lg:p-12 shadow-professional-xl border-2 ${skillCategories[activeCategory].borderColor}`}
             >
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-full">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 xxs:gap-6 w-full max-w-full">
                 {skillCategories[activeCategory].skills.map((skill, index) => (
                   <div
                     key={skill.name}
-                    className={`bg-slate-50 rounded-xl p-4 sm:p-6 border border-slate-200 card-hover w-full max-w-full ${isVisible ? "animate-scale-in" : "opacity-0"}`}
+                    className={`bg-slate-50 rounded-xl p-3 xxs:p-4 sm:p-6 border border-slate-200 card-hover w-full max-w-full ${isVisible ? "animate-scale-in" : "opacity-0"}`}
                     style={{ animationDelay: `${index * 100}ms` }}
                   >
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center space-x-3">
-                        <span className="text-2xl">{skill.icon}</span>
+                    <div className="flex items-center justify-between mb-3 xxs:mb-4">
+                      <div className="flex items-center space-x-2 xxs:space-x-3">
+                        <span className="text-xl xxs:text-2xl">{skill.icon}</span>
                         <div>
-                          <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl font-semibold text-slate-900">{skill.name}</h3>
-                          <p className="text-sm text-slate-600">{skill.experience}</p>
+                          <h3 className="text-sm xxs:text-base xs:text-lg sm:text-xl md:text-2xl font-semibold text-slate-900">{skill.name}</h3>
+                          <p className="text-xs xxs:text-sm text-slate-600">{skill.experience}</p>
                         </div>
                       </div>
                       <div className="text-right">
-                        <div className={`text-sm font-bold ${skillCategories[activeCategory].color}`}>
+                        <div className={`text-xs xxs:text-sm font-bold ${skillCategories[activeCategory].color}`}>
                           {skill.level}
                         </div>
                       </div>
@@ -212,21 +212,21 @@ export default function Skills() {
 
           {/* Currently Exploring */}
           <div className="text-center">
-            <div className="inline-flex items-center space-x-2 bg-white border border-slate-200 px-4 py-2 rounded-full mb-8 shadow-professional">
-              <Globe className="w-5 h-5 text-green-600" />
-              <span className="text-sm font-medium text-slate-700">Currently Exploring</span>
+            <div className="inline-flex items-center space-x-2 bg-white border border-slate-200 px-3 xxs:px-4 py-2 rounded-full mb-8 shadow-professional">
+              <Globe className="w-4 xxs:w-5 h-4 xxs:h-5 text-green-600" />
+              <span className="text-xs xxs:text-sm font-medium text-slate-700">Currently Exploring</span>
             </div>
 
-            <div className="flex flex-wrap justify-center gap-6">
+            <div className="flex flex-wrap justify-center gap-3 xxs:gap-6">
               {currentlyExploring.map((tech, index) => (
                 <div
                   key={tech.name}
-                  className={`${tech.color} border-2 rounded-xl px-6 py-4 card-hover ${isVisible ? "animate-scale-in" : "opacity-0"}`}
+                  className={`${tech.color} border-2 rounded-xl px-4 xxs:px-6 py-3 xxs:py-4 card-hover ${isVisible ? "animate-scale-in" : "opacity-0"}`}
                   style={{ animationDelay: `${800 + index * 100}ms` }}
                 >
-                  <div className="flex items-center space-x-3">
-                    <span className="text-2xl">{tech.icon}</span>
-                    <span className="font-semibold">{tech.name}</span>
+                  <div className="flex items-center space-x-2 xxs:space-x-3">
+                    <span className="text-xl xxs:text-2xl">{tech.icon}</span>
+                    <span className="font-semibold text-xs xxs:text-base">{tech.name}</span>
                     <div className="w-2 h-2 bg-current rounded-full animate-pulse"></div>
                   </div>
                 </div>
