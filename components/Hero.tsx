@@ -159,11 +159,11 @@ export default function Hero() {
 
             {/* Main Heading with Typing Effect */}
             <div className="space-y-4">
-              <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-slate-900">
+              <h1 className="text-xl xxs:text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-slate-900">
                 Hi, I'm <span className="text-blue-600">Sumit Walmiki</span>
               </h1>
-              <div className="flex items-center min-h-[2.5rem]">
-                <h2 className="text-base xs:text-lg sm:text-2xl md:text-3xl font-semibold text-slate-700">
+              <div className="flex items-center min-h-[2.2rem] xxs:min-h-[2rem]">
+                <h2 className="text-sm xxs:text-base xs:text-lg sm:text-2xl md:text-3xl font-semibold text-slate-700">
                   {typedText}
                   <span className="animate-pulse text-blue-600">|</span>
                 </h2>
@@ -171,23 +171,23 @@ export default function Hero() {
             </div>
 
             {/* Description */}
-            <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-base xxs:text-lg sm:text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
               I build scalable, high-performance applications using modern
               technologies. From distributed systems to user-facing products, I
               love solving complex problems and creating impactful solutions.
             </p>
 
             {/* Current Tech Focus */}
-            <div className="flex items-center space-x-4">
-              <span className="text-slate-600 font-medium">
+            <div className="flex flex-wrap items-center space-x-2 xxs:space-x-2 sm:space-x-4">
+              <span className="text-slate-600 font-medium text-xs xxs:text-sm sm:text-base">
                 Passionate about
               </span>
               <div
-                className={`flex items-center space-x-2 px-3 py-2 ${techStack[currentTech].bg} rounded-lg transition-all duration-500`}
+                className={`flex items-center space-x-1 xxs:space-x-2 px-2 xxs:px-3 py-1 xxs:py-2 ${techStack[currentTech].bg} rounded-lg transition-all duration-500`}
               >
-                <span className="text-2xl">{techStack[currentTech].icon}</span>
+                <span className="text-xl xxs:text-2xl">{techStack[currentTech].icon}</span>
                 <span
-                  className={`font-semibold ${techStack[currentTech].color}`}
+                  className={`font-semibold text-xs xxs:text-base ${techStack[currentTech].color}`}
                 >
                   {techStack[currentTech].name}
                 </span>
@@ -195,15 +195,15 @@ export default function Hero() {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-2 xxs:gap-4">
               <Button
                 size="lg"
                 onClick={() => handleNavClick("#projects")}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 xxs:px-8 py-3 xxs:py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group text-sm xxs:text-base"
               >
-                <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+                <Play className="w-4 xxs:w-5 h-4 xxs:h-5 mr-2 group-hover:scale-110 transition-transform" />
                 View My Work
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 xxs:w-5 h-4 xxs:h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
               <DownloadResumeButton />
             </div>
@@ -216,23 +216,23 @@ export default function Hero() {
             }`}
           >
             {/* Code Terminal */}
-            <div className="bg-slate-900 rounded-2xl shadow-2xl overflow-hidden border border-slate-700">
+            <div className="bg-slate-900 rounded-2xl shadow-2xl overflow-hidden border border-slate-700 xxs:text-xs">
               {/* Terminal Header */}
-              <div className="flex items-center justify-between px-4 py-3 bg-slate-800 border-b border-slate-700">
-                <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+              <div className="flex items-center justify-between px-2 xxs:px-4 py-2 xxs:py-3 bg-slate-800 border-b border-slate-700">
+                <div className="flex items-center space-x-1 xxs:space-x-2">
+                  <div className="w-2 xxs:w-3 h-2 xxs:h-3 bg-red-500 rounded-full"></div>
+                  <div className="w-2 xxs:w-3 h-2 xxs:h-3 bg-yellow-500 rounded-full"></div>
+                  <div className="w-2 xxs:w-3 h-2 xxs:h-3 bg-green-500 rounded-full"></div>
                 </div>
-                <div className="flex items-center space-x-2 text-slate-400 text-sm">
-                  <Terminal className="w-4 h-4" />
+                <div className="flex items-center space-x-1 xxs:space-x-2 text-slate-400 text-xs xxs:text-sm">
+                  <Terminal className="w-3 xxs:w-4 h-3 xxs:h-4" />
                   <span>developer-profile.js</span>
                 </div>
-                <div className="w-16"></div>
+                <div className="w-10 xxs:w-16"></div>
               </div>
 
               {/* Code Content */}
-              <div className="p-6 font-mono text-sm">
+              <div className="p-3 xxs:p-6 font-mono text-xs xxs:text-sm">
                 <pre className="text-slate-300 leading-relaxed">
                   <code>
                     <span className="text-purple-400">const</span>{" "}
