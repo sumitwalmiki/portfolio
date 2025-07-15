@@ -163,18 +163,16 @@ export default function Hero() {
                 Hi, I'm <span className="text-blue-600">Sumit Walmiki</span>
               </h1>
               <div className="flex items-center min-h-[2.2rem] xxs:min-h-[2rem]">
-                <h2 className="text-sm xxs:text-base xs:text-lg sm:text-2xl md:text-3xl font-semibold text-slate-700">
-                  {typedText}
-                  <span className="animate-pulse text-blue-600">|</span>
+                <h2 className="text-sm xxs:text-base xs:text-md sm:text-xl md:text-2xl font-semibold text-slate-700">
+									<span className="text-blue-600">Exploring AI Integration | </span>
+									{typedText}
                 </h2>
               </div>
             </div>
 
             {/* Description */}
             <p className="text-base xxs:text-lg sm:text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
-              I build scalable, high-performance applications using modern
-              technologies. From distributed systems to user-facing products, I
-              love solving complex problems and creating impactful solutions.
+              I build scalable, high-performance web applications and experiment with AI-powered features. I love solving complex problems and creating impactful solutions.
             </p>
 
             {/* Current Tech Focus */}
