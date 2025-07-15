@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Code, Users, Award, Zap, Target, Coffee, Lightbulb, TrendingUp } from "lucide-react"
+import { Code, Award, Zap, Target, Coffee, Lightbulb, TrendingUp, Cable } from "lucide-react"
 
 export default function About() {
   const [isVisible, setIsVisible] = useState(false)
@@ -33,9 +33,9 @@ export default function About() {
       borderColor: "border-blue-200",
     },
     {
-      icon: Users,
-      title: "50+ Projects",
-      subtitle: "Successfully Delivered",
+      icon: Cable,
+      title: "Real Time",
+      subtitle: "Live Chat, Notifications",
       color: "text-green-600",
       bgColor: "bg-green-50",
       borderColor: "border-green-200",
