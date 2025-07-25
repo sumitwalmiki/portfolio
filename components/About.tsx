@@ -72,7 +72,7 @@ export default function About() {
         null,
       points: [
         "📍 2015 – The Beginning\nWrote my first Python program during the first year of my Computer Science degree.\nDiscovered the joy of programming by manipulating outputs and solving logic puzzles.",
-        "📍 2016–2018 – Learning & Freelancing\n Built personal project for educaional institute and practiced by creating small web applications.\nTook freelance gigs to gain real-world experience.",
+        "📍 2015–2020 – Learning & Freelancing\n While pursuing my B.Sc. in Computer Science (graduated in 2018), explored full-stack development via online courses like Angela Yu’s full stack development bootcamp.\nBuilt personal project for educational institute.\nTook freelance gigs to gain real-world experience",
         "📍 2020 – First Professional Experience\nStarted as a Junior Web Developer at Diginnovators.\nWorked on projects like Customer 360, Health Score, and onboarding flows using HTML, CSS, Bootstrap, and Node.js.\n→ Gained hands-on experience in API development, MongoDB, Socket.io, and Zoho CRM integration.",
         "📍 2021 – Real-Time Systems & Product Thinking\nBuilt real-time chat systems and profile matching logic for matrimonial and social platforms.\n→ Developed key modules in WAP: War Against Pollution.",
         "📍 2022 – Scaling Up at HumaneBITS\nJoined Humane Business Intelligence Technology Solutions.\nLed frontend team for Alpha Copilot, building scalable dashboards with Next.js, Highcharts, and Amazon QuickSight.\n→ Focused on performance optimization, SEO, and analytics with Google Tag Manager.",
@@ -229,22 +229,22 @@ export default function About() {
             {/* Tab Content */}
             <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-professional-xl border border-slate-200">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
-                  {activeTab === "journey" ? (
+                  {activeTab === "journey" && window.innerWidth > 996 ? (
                     <div className="col-span-2">
                       <JourneyTimeline milestones={journeyMilestones} />
                     </div>
                   ) : (
                     <>
-                      <div className="space-y-6">
+                      {(tabContent[activeTab as keyof typeof tabContent]?.title && tabContent[activeTab as keyof typeof tabContent]?.content) &&<div className="space-y-6">
                         <h3 className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-bold text-slate-900 mb-4">
-                          {tabContent[activeTab as keyof typeof tabContent].title}
+                          {tabContent[activeTab as keyof typeof tabContent]?.title}
                         </h3>
                         <p className="text-lg text-slate-600 leading-relaxed">
-                          {tabContent[activeTab as keyof typeof tabContent].content}
+                          {tabContent[activeTab as keyof typeof tabContent]?.content}
                         </p>
-                      </div>
+                      </div>}
                       <div className="space-y-4">
-                        {tabContent[activeTab as keyof typeof tabContent].points.map((point, index) => (
+                        {tabContent[activeTab as keyof typeof tabContent]?.points.map((point, index) => (
                           <div
                             key={index}
                             className={`flex items-start space-x-3 p-4 bg-slate-50 rounded-xl border border-slate-200 card-hover ${isVisible ? "animate-slide-in-right" : "opacity-0"}`}
