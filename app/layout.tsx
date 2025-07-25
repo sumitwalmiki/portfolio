@@ -17,14 +17,14 @@ export const metadata: Metadata = {
   keywords:
     "Full-Stack Developer, Software Engineer, JavaScript, Python, React, Node.js, AWS, System Design, Web Development, Tech Jobs, Google, Meta, FAANG",
   authors: [{ name: "Sumit Walmiki" }],
-  viewport: "width=device-width, initial-scale=1",
+  metadataBase: new URL('https://sumitwalmiki.vercel.app'),
   openGraph: {
     title: "Sumit Walmiki - Full-Stack Software Engineer",
     description:
       "Building scalable, high-performance applications with modern technologies.",
     type: "website",
     locale: "en_US",
-    url: "https://sumitwalmiki.dev",
+    url: "https://sumitwalmiki.vercel.app/",
     siteName: "Sumit Walmiki Portfolio",
     images: [
       {
@@ -58,6 +58,11 @@ export const metadata: Metadata = {
     google: "your-google-verification-code",
   },
   generator: "v0.dev",
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
 };
 
 export default function RootLayout({
