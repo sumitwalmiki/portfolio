@@ -1,7 +1,8 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Code, Award, Zap, Target, Coffee, Lightbulb, TrendingUp, Cable } from "lucide-react"
+import { Code, Award, Zap, Target, Coffee, Lightbulb, TrendingUp, Cable, Thermometer, Rocket, BarChart2, Puzzle, Sparkles, BrainCog } from "lucide-react"
+import JourneyTimeline from "./JourneyTimeline";
 
 export default function About() {
   const [isVisible, setIsVisible] = useState(false)
@@ -66,14 +67,17 @@ export default function About() {
 
   const tabContent = {
     journey: {
-      title: "From Curiosity to Expertise",
+      title: null,
       content:
-        "Started as a curious developer fascinated by the power of technology to solve real-world problems. Over 4+ years, I've evolved from building simple applications to architecting complex, scalable systems. My experience spans from startups to enterprise-level projects.",
+        null,
       points: [
-        "🎓 Strong foundation in computer science fundamentals",
-        "🚀 Expertise in modern web technologies and cloud platforms",
-        "🏆 Track record of delivering high-impact projects",
-        "📈 Passionate about emerging technologies and best practices",
+        "📍 2015 – The Beginning\nWrote my first Python program during the first year of my Computer Science degree.\nDiscovered the joy of programming by manipulating outputs and solving logic puzzles.",
+        "📍 2016–2018 – Learning & Freelancing\n Built personal project for educaional institute and practiced by creating small web applications.\nTook freelance gigs to gain real-world experience.",
+        "📍 2020 – First Professional Experience\nStarted as a Junior Web Developer at Diginnovators.\nWorked on projects like Customer 360, Health Score, and onboarding flows using HTML, CSS, Bootstrap, and Node.js.\n→ Gained hands-on experience in API development, MongoDB, Socket.io, and Zoho CRM integration.",
+        "📍 2021 – Real-Time Systems & Product Thinking\nBuilt real-time chat systems and profile matching logic for matrimonial and social platforms.\n→ Developed key modules in WAP: War Against Pollution.",
+        "📍 2022 – Scaling Up at HumaneBITS\nJoined Humane Business Intelligence Technology Solutions.\nLed frontend team for Alpha Copilot, building scalable dashboards with Next.js, Highcharts, and Amazon QuickSight.\n→ Focused on performance optimization, SEO, and analytics with Google Tag Manager.",
+        "📍 2023 – System Design & UI/UX Maturity\nExpanded into SSR/SSG, improved code review culture, collaborated across teams.\n→ Built HealthTech Alpha website, applying best practices in responsive design and modular architecture.",
+        "📍 2024–2025 – Vision Forward\nCurrently exploring AI integrations, building full-stack apps with clean architecture, writing blogs, and mentoring others.\n→ Goal: Build user-first, scalable, production-grade applications and grow into a Tech Lead role."
       ],
     },
     approach: {
@@ -98,7 +102,67 @@ export default function About() {
         "🎯 Mentoring junior developers and sharing knowledge",
       ],
     },
-  }
+	}
+	
+
+  const journeyMilestones = [
+    {
+      year: "2015",
+      title: "The Beginning",
+      icon: <Thermometer className="w-7 h-7 text-blue-600" aria-label="First Python Program" />,
+      iconBg: "bg-blue-100",
+      summary: "Wrote my first Python program during the first year of my Computer Science degree. Discovered the joy of programming by manipulating outputs and solving logic puzzles.",
+      tech: "Python, Logic",
+		},
+		{
+      year: "2015 - 2020",
+      title: " Learning & Freelancing",
+      icon: <BrainCog className="w-7 h-7 text-blue-600" aria-label="First Python Program" />,
+      iconBg: "bg-green-100",
+      summary: "While pursuing my B.Sc. in Computer Science (graduated in 2018), explored full-stack development via online courses like Angela Yu’s full stack development bootcamp.Built personal project for educational institute. and practiced by creating small web applications.Took freelance gigs to gain real-world experience.",
+      tech: "Python, Logic, DSA, OOP",
+    },
+    {
+      year: "2020",
+      title: "First Professional Experience",
+      icon: <Rocket className="w-7 h-7 text-orange-500" aria-label="First Job" />,
+      iconBg: "bg-orange-100",
+      summary: "Started as a Junior Web Developer at Diginnovators. Worked on Customer 360, Health Score, onboarding flows.",
+      tech: "Node.js, MongoDB, CRM",
+    },
+    {
+      year: "2021",
+      title: "Real-Time Systems & Product Thinking",
+      icon: <Lightbulb className="w-7 h-7 text-yellow-500" aria-label="Real-Time Systems" />,
+      iconBg: "bg-yellow-100",
+      summary: "Built real-time chat systems and profile matching logic for matrimonial and social platforms. Developed key modules in WAP: War Against Pollution.",
+      tech: "Socket.io, Real-time",
+    },
+    {
+      year: "2022",
+      title: "Scaling Up at HumaneBITS",
+      icon: <BarChart2 className="w-7 h-7 text-purple-600" aria-label="Scaling Up" />,
+      iconBg: "bg-purple-100",
+      summary: "Joined HumaneBITS. Led frontend for Alpha Copilot, building scalable dashboards with Next.js, Highcharts, and Amazon QuickSight. Focused on performance optimization, SEO, and analytics.",
+      tech: "Next.js, Analytics",
+    },
+    {
+      year: "2023",
+      title: "System Design & UI/UX Maturity",
+      icon: <Puzzle className="w-7 h-7 text-green-600" aria-label="System Design" />,
+      iconBg: "bg-green-100",
+      summary: "Expanded into SSR/SSG, improved code review culture, collaborated across teams. Built HealthTech Alpha website, applying best practices in responsive design and modular architecture.",
+      tech: "SSR, SSG, UI/UX",
+    },
+    {
+      year: "2024–2025",
+      title: "Vision Forward",
+      icon: <Sparkles className="w-7 h-7 text-pink-500" aria-label="Vision Forward" />,
+      iconBg: "bg-pink-100",
+      summary: "Currently exploring AI integrations, building full-stack apps with clean architecture, writing blogs, and mentoring others. Goal: Build user-first, scalable, production-grade applications and grow into a Tech Lead role.",
+      tech: "AI, OpenAI, Mentoring",
+    },
+  ];
 
   return (
     <section id="about" className="py-20 bg-white relative overflow-hidden">
@@ -165,28 +229,35 @@ export default function About() {
             {/* Tab Content */}
             <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-professional-xl border border-slate-200">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
-                <div className="space-y-6">
-                  <h3 className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-bold text-slate-900 mb-4">
-                    {tabContent[activeTab as keyof typeof tabContent].title}
-                  </h3>
-                  <p className="text-lg text-slate-600 leading-relaxed">
-                    {tabContent[activeTab as keyof typeof tabContent].content}
-                  </p>
-                </div>
-
-                <div className="space-y-4">
-                  {tabContent[activeTab as keyof typeof tabContent].points.map((point, index) => (
-                    <div
-                      key={index}
-                      className={`flex items-start space-x-3 p-4 bg-slate-50 rounded-xl border border-slate-200 card-hover ${isVisible ? "animate-slide-in-right" : "opacity-0"}`}
-                      style={{ animationDelay: `${index * 100}ms` }}
-                    >
-                      <div className="text-2xl flex-shrink-0">{point.split(" ")[0]}</div>
-                      <p className="text-slate-700 font-medium">{point.substring(point.indexOf(" ") + 1)}</p>
+                  {activeTab === "journey" ? (
+                    <div className="col-span-2">
+                      <JourneyTimeline milestones={journeyMilestones} />
                     </div>
-                  ))}
+                  ) : (
+                    <>
+                      <div className="space-y-6">
+                        <h3 className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-bold text-slate-900 mb-4">
+                          {tabContent[activeTab as keyof typeof tabContent].title}
+                        </h3>
+                        <p className="text-lg text-slate-600 leading-relaxed">
+                          {tabContent[activeTab as keyof typeof tabContent].content}
+                        </p>
+                      </div>
+                      <div className="space-y-4">
+                        {tabContent[activeTab as keyof typeof tabContent].points.map((point, index) => (
+                          <div
+                            key={index}
+                            className={`flex items-start space-x-3 p-4 bg-slate-50 rounded-xl border border-slate-200 card-hover ${isVisible ? "animate-slide-in-right" : "opacity-0"}`}
+                            style={{ animationDelay: `${index * 100}ms` }}
+                          >
+                            <div className="text-2xl flex-shrink-0">{point.split(" ")[0]}</div>
+                            <p className="text-slate-700 font-medium">{point.substring(point.indexOf(" ") + 1)}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </>
+                  )}
                 </div>
-              </div>
             </div>
           </div>
         </div>
