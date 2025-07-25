@@ -7,6 +7,14 @@ import JourneyTimeline from "./JourneyTimeline";
 export default function About() {
   const [isVisible, setIsVisible] = useState(false)
   const [activeTab, setActiveTab] = useState("journey")
+  const [viewportWidth, setViewportWidth] = useState<number | null>(null);
+
+  useEffect(() => {
+    setViewportWidth(window.innerWidth);
+    const handleResize = () => setViewportWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -229,7 +237,7 @@ export default function About() {
             {/* Tab Content */}
             <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-professional-xl border border-slate-200">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
-                  {activeTab === "journey" && window.innerWidth > 996 ? (
+                  {activeTab === "journey" && viewportWidth !== null && viewportWidth > 996 ? (
                     <div className="col-span-2">
                       <JourneyTimeline milestones={journeyMilestones} />
                     </div>
