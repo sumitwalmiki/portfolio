@@ -66,6 +66,15 @@ export default function JourneyTimeline({ milestones }: JourneyTimelineProps) {
             </div>
           </div>
         ))}
+			</div>
+			
+      {/* Navigation Hint */}
+      <div className="mt-8 text-center">
+        <div className="inline-flex items-center space-x-2 text-slate-500 text-sm">
+          <span>←</span>
+          <span>Scroll horizontally to explore the timeline</span>
+          <span>→</span>
+        </div>
       </div>
     </div>
   );
