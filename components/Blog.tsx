@@ -149,7 +149,7 @@ export default function Blog() {
   );
 
   return (
-    <section id="blog" className="py-20 bg-slate-50">
+    <section id="blog" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
           className={`transition-all duration-1000 ${

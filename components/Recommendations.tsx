@@ -120,7 +120,7 @@ export default function Recommendations() {
   return (
     <section
       id="recommendations"
-      className="py-20 bg-white relative overflow-hidden"
+      className="py-20 bg-slate-50 relative overflow-hidden"
     >
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-blue-50 rounded-full blur-3xl opacity-30"></div>
