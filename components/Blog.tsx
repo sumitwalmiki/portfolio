@@ -45,96 +45,80 @@ export default function Blog() {
         "Creating a Custom useForm Hook in React for Dynamic Form Validation",
       excerpt:
         "Learn how to build a reusable custom hook for handling form state and validation in React applications with TypeScript support.",
-      date: "2024-01-15",
-      readTime: "8 min read",
+      date: "2024-06-22",
+      readTime: "10 min read",
       link: "https://dev.to/sumitwalmiki/creating-a-custom-useform-hook-in-react-for-dynamic-form-validation-595f",
-      tags: ["React", "TypeScript", "Hooks", "Form Validation"],
+      tags: ["React", "Hooks", "Form Validation"],
       category: "React",
       platform: "Dev.to",
       thumbnail: "/placeholder.svg?height=200&width=300",
       featured: true,
-      views: "2.5k",
-      likes: "156",
-    },
+      views: "539",
+      likes: "42",
+		},
     {
       id: 2,
-      title: "Building Scalable Node.js APIs with Express and MongoDB",
+      title: "Exploring AI Integrations to create images",
       excerpt:
-        "A comprehensive guide to creating robust backend APIs using Node.js, Express.js, and MongoDB with best practices for production.",
-      date: "2024-01-08",
-      readTime: "12 min read",
-      link: "https://dev.to/sumitwalmiki/building-scalable-nodejs-apis-with-express-and-mongodb",
-      tags: ["Node.js", "Express", "MongoDB", "API"],
-      category: "Backend",
-      platform: "Dev.to",
+        "Explore the power of AI to create visually appealing cover images for linkedin.",
+      date: "2025-08-16",
+      readTime: "1 min read",
+      link: "https://www.linkedin.com/posts/sumitwalmiki_exploring-ai-integrations-in-design-while-activity-7362396699685797888-lqXj?utm_source=share&utm_medium=member_desktop&rcm=ACoAAB8EPyoBVIuO_HU80T9o3XVyGUGAEtSBM_0",
+      tags: ["AI", "Design", "LinkedIn"],
+      category: "AI",
+      platform: "LinkedIn",
       thumbnail: "/placeholder.svg?height=200&width=300",
       featured: false,
-      views: "1.8k",
-      likes: "89",
-    },
+      views: "75",
+      likes: "40",
+		},
     {
       id: 3,
-      title: "Next.js 14 App Router: Complete Guide to Server Components",
+      title: "LeetCode Learning #1: Maximum Average Subarray I – Sliding Window Approach",
       excerpt:
-        "Explore the power of Next.js 14 App Router and Server Components for building high-performance React applications.",
-      date: "2023-12-22",
-      readTime: "10 min read",
-      link: "https://dev.to/sumitwalmiki/nextjs-14-app-router-complete-guide-to-server-components",
-      tags: ["Next.js", "React", "Server Components", "Performance"],
-      category: "Next.js",
-      platform: "Dev.to",
+        "Been working on sliding window problems, and today I solved LeetCode 643: Maximum Average Subarray I.",
+      date: "2025-04-14",
+      readTime: "1 min read",
+      link: "https://www.linkedin.com/posts/sumitwalmiki_leetcode-coding-slidingwindow-activity-7309232640165908481-C9eZ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAB8EPyoBVIuO_HU80T9o3XVyGUGAEtSBM_0",
+      tags: ["LeetCode", "Coding", "Sliding Window"],
+      category: "LeetCode",
+      platform: "LinkedIn",
       thumbnail: "/placeholder.svg?height=200&width=300",
-      featured: false,
-      views: "3.2k",
-      likes: "201",
-    },
-    {
+      featured: true,
+      views: "368",
+      likes: "181",
+		},		
+		{
       id: 4,
-      title: "The Future of Full-Stack Development: Trends and Technologies",
+      title: "Performance Optimization – Preventing Unnecessary Re-Renders",
       excerpt:
-        "Exploring emerging trends in full-stack development and how they're shaping the future of web applications.",
-      date: "2023-12-15",
-      readTime: "6 min read",
-      link: "https://linkedin.com/pulse/future-full-stack-development-trends-technologies-sumit-walmiki",
-      tags: ["Full-Stack", "Trends", "Technology", "Future"],
-      category: "Industry",
+        "Optimizing React applications is crucial for performance and scalability.",
+      date: "2025-03-28",
+      readTime: "1 min read",
+      link: "https://www.linkedin.com/posts/sumitwalmiki_react-performanceoptimization-reactjs-activity-7309967274013040640-IHJD?utm_source=share&utm_medium=member_desktop&rcm=ACoAAB8EPyoBVIuO_HU80T9o3XVyGUGAEtSBM_0",
+      tags: ["React", "Performance", "Optimization"],
+      category: "React",
       platform: "LinkedIn",
       thumbnail: "/placeholder.svg?height=200&width=300",
       featured: false,
-      views: "1.5k",
-      likes: "78",
-    },
+      views: "205",
+      likes: "74",
+		},
     {
       id: 5,
-      title: "Optimizing React Performance: Memoization and Virtual DOM",
+      title: "The Power of Throttle and Debounce for Better Event Handling",
       excerpt:
-        "Deep dive into React performance optimization techniques including useMemo, useCallback, and understanding the Virtual DOM.",
-      date: "2023-11-28",
-      readTime: "15 min read",
-      link: "https://dev.to/sumitwalmiki/optimizing-react-performance-memoization-and-virtual-dom",
-      tags: ["React", "Performance", "Optimization", "Virtual DOM"],
-      category: "React",
-      platform: "Dev.to",
-      thumbnail: "/placeholder.svg?height=200&width=300",
-      featured: false,
-      views: "4.1k",
-      likes: "267",
-    },
-    {
-      id: 6,
-      title: "Building Microservices with Node.js and Docker",
-      excerpt:
-        "Learn how to architect and deploy microservices using Node.js, Docker, and modern DevOps practices.",
-      date: "2023-11-10",
-      readTime: "18 min read",
-      link: "https://linkedin.com/pulse/building-microservices-nodejs-docker-sumit-walmiki",
-      tags: ["Microservices", "Node.js", "Docker", "DevOps"],
-      category: "Backend",
+        "Mastering javaScript efficiency with Throttle and Debounce for Better Event Handling",
+      date: "2025-08-16",
+      readTime: "1 min read",
+      link: "https://www.linkedin.com/posts/sumitwalmiki_webdev-javascript-programming-activity-7201599058048663553-2yab?utm_source=share&utm_medium=member_desktop&rcm=ACoAAB8EPyoBVIuO_HU80T9o3XVyGUGAEtSBM_0",
+      tags: ["JavaScript", "Performance"],
+      category: "JavaScript",
       platform: "LinkedIn",
       thumbnail: "/placeholder.svg?height=200&width=300",
       featured: false,
-      views: "2.7k",
-      likes: "134",
+      views: "368",
+      likes: "9",
     },
   ];
 
@@ -188,34 +172,6 @@ export default function Blog() {
               Sharing insights, tutorials, and thoughts about modern web
               development, best practices, and emerging technologies.
             </p>
-
-            {/* Stats */}
-            <div className="flex justify-center space-x-8 mt-8">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-slate-900">
-                  {Math.round(totalViews / 1000)}k+
-                </div>
-                <div className="text-sm text-slate-600 flex items-center">
-                  <Eye className="w-4 h-4 mr-1" />
-                  Total Views
-                </div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-slate-900">
-                  {totalLikes}+
-                </div>
-                <div className="text-sm text-slate-600 flex items-center">
-                  <TrendingUp className="w-4 h-4 mr-1" />
-                  Total Likes
-                </div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-slate-900">
-                  {blogPosts.length}
-                </div>
-                <div className="text-sm text-slate-600">Articles</div>
-              </div>
-            </div>
           </div>
 
           {/* Filters */}
@@ -283,18 +239,8 @@ export default function Blog() {
             selectedPlatform === "All" && (
               <div className="mb-16">
                 <div className="bg-white rounded-3xl overflow-hidden border-2 border-blue-200 hover:border-blue-300 transition-all duration-300 hover:shadow-2xl group">
-                  <div className="md:flex">
-                    <div className="md:w-1/3">
-                      <Image
-                        src={featuredPost.thumbnail || "/placeholder.svg"}
-                        alt={featuredPost.title}
-                        width={400}
-                        height={250}
-                        className="w-full h-64 md:h-full object-cover"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div className="md:w-2/3 p-8">
+								<div className="md:block">
+                    <div className="p-8">
                       <div className="flex items-center space-x-2 mb-4">
                         <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-medium">
                           Featured
@@ -383,30 +329,6 @@ export default function Blog() {
                 }`}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="relative">
-                  <Image
-                    src={post.thumbnail || "/placeholder.svg"}
-                    alt={post.title}
-                    width={300}
-                    height={200}
-                    className="w-full h-48 object-cover"
-                    loading="lazy"
-                  />
-                  <div className="absolute top-4 left-4 flex space-x-2">
-                    <span className="px-2 py-1 bg-white/90 text-slate-700 rounded-full text-xs font-medium">
-                      {post.category}
-                    </span>
-                    <span
-                      className={`px-2 py-1 rounded-full text-xs font-medium ${
-                        post.platform === "Dev.to"
-                          ? "bg-black/90 text-white"
-                          : "bg-blue-600/90 text-white"
-                      }`}
-                    >
-                      {post.platform}
-                    </span>
-                  </div>
-                </div>
 
                 <div className="p-6">
                   <div className="flex items-center space-x-4 text-xs text-slate-500 mb-3">
@@ -418,7 +340,7 @@ export default function Blog() {
                     <div className="flex items-center space-x-1">
                       <Clock className="w-3 h-3" />
                       <span>{post.readTime}</span>
-                    </div>
+										</div>
                   </div>
 
                   <h3 className="text-lg font-bold text-slate-900 mb-3 group-hover:text-blue-700 transition-colors leading-tight line-clamp-2">
@@ -460,7 +382,24 @@ export default function Blog() {
                       <div className="flex items-center space-x-1">
                         <TrendingUp className="w-3 h-3" />
                         <span>{post.likes}</span>
-                      </div>
+											</div>
+											
+										<div className="flex items-center space-x-1">
+											<span className="px-2 py-1 bg-white/90 text-slate-700 rounded-full text-xs font-medium">
+                      {post.category}
+                    </span>
+										</div>
+										<div className="flex items-center space-x-1">											
+                    <span
+                      className={`px-2 py-1 rounded-full text-xs font-medium ${
+                        post.platform === "Dev.to"
+                          ? "bg-black/90 text-white"
+                          : "bg-blue-600/90 text-white"
+                      }`}
+                    >
+                      {post.platform}
+                    </span>
+										</div>
                     </div>
 
                     <Link

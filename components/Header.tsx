@@ -14,7 +14,7 @@ export default function Header() {
     setScrolled(window.scrollY > 20)
 
     // Update active section based on scroll position
-    const sections = ["home", "about", "skills", "projects", "blog", "recommendations", "contact"]
+    const sections = ["home", "about", "skills", "blog", "recommendations", "contact"]
     const currentSection = sections.find((section) => {
       const element = document.getElementById(section)
       if (element) {
@@ -44,7 +44,7 @@ export default function Header() {
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
     { name: "Skills", href: "#skills" },
-    { name: "Projects", href: "#projects" },
+    // { name: "Projects", href: "#projects" },
     { name: "Blog", href: "#blog" },
     { name: "Recommendations", href: "#recommendations" },
     { name: "Contact", href: "#contact" },

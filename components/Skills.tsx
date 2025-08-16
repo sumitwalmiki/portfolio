@@ -83,9 +83,9 @@ export default function Skills() {
 		
 		
 		const currentlyExploring = [
-			{ name: "AI & GPT Integration", icon: "🤖", color: "bg-purple-50 border-purple-200 text-purple-700" },
+			{ name: "AI Integration", icon: "🤖", color: "bg-purple-50 border-purple-200 text-purple-700" },
 			{ name: "Advanced Frontend Architecture", icon: "☸️", color: "bg-blue-50 border-blue-200 text-blue-700" },
-			{ name: "System Design & Low-Level Design (LLD)", icon: "🦀", color: "bg-orange-50 border-orange-200 text-orange-700" },
+			{ name: "System Design", icon: "🦀", color: "bg-orange-50 border-orange-200 text-orange-700" },
 		]
 	
 		useEffect(() => {

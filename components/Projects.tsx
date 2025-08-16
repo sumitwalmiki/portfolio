@@ -39,10 +39,10 @@ export default function Projects() {
 
   const projects = [
     {
-      id: "alpha-copilot",
-      title: "Alpha Copilot",
+      id: "covid-global",
+      title: "COVID Global Stats Tracker",
       description:
-        "Advanced healthcare analytics dashboard with real-time data visualization and interactive exploration.",
+        "COVID Global Stats Tracker.",
       longDescription:
         "A comprehensive analytics platform featuring dynamic dashboards, real-time data processing, and advanced visualization tools.",
       image: "/placeholder.svg?height=300&width=500",
@@ -234,9 +234,6 @@ export default function Projects() {
           {/* Featured Projects */}
           {filter === "all" && (
             <div className="mb-16">
-              <h3 className="text-2xl font-bold text-slate-900 mb-8 text-center">
-                ⭐ Featured Work
-              </h3>
               <div className="grid lg:grid-cols-2 gap-8">
                 {featuredProjects.map((project, index) => (
                   <div
