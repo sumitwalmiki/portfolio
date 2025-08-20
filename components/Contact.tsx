@@ -109,28 +109,28 @@ export default function Contact() {
       primary: true,
     },
     {
-      id: "github",
-      icon: Github,
-      title: "GitHub",
-      subtitle: "Check out my code",
-      value: "View repositories",
-      href: "https://github.com/sumitwalmiki",
-      color: "text-slate-700",
-      bgColor: "bg-slate-50",
-      borderColor: "border-slate-200",
-      description: "Explore my open source work",
-    },
-    {
       id: "schedule",
       icon: Calendar,
       title: "Book a 15-min Call",
       subtitle: "Quick consultation",
       value: "Schedule now",
-      href: "https://calendly.com/sumitwalmiki/15min",
+      href: "https://calendly.com/walmiki240/30min",
       color: "text-green-600",
       bgColor: "bg-green-50",
       borderColor: "border-green-200",
       description: "Free consultation about your project",
+    },
+    {
+      id: "collaborate",
+      title: "Let's Collaborate",
+      subtitle: "Write me an email",
+      value: "Start Collaboration",
+      href: "mailto:walmiki240@gmail.com?subject=Collaboration Opportunity&body=Hi Sumit, I'd like to collaborate on...",      
+      color: "text-orange-600",
+      bgColor: "bg-orange-50",
+      borderColor: "border-orange-200",
+      icon: User,
+      description: "Ready to work together ?",
     },
   ]
 
@@ -158,39 +158,6 @@ export default function Contact() {
       color: "text-purple-600",
       bgColor: "bg-purple-50",
       borderColor: "border-purple-200",
-    },
-  ]
-
-  const ctaOptions = [
-    {
-      title: "Let's Collaborate",
-      description: "Ready to work together on your next project?",
-      action: "Start Collaboration",
-      color: "text-blue-600",
-      bgColor: "bg-blue-50",
-      borderColor: "border-blue-200",
-      icon: User,
-      href: "mailto:walmiki240@gmail.com?subject=Collaboration Opportunity&body=Hi Sumit, I'd like to collaborate on...",
-    },
-    {
-      title: "Need a Developer?",
-      description: "Looking for a skilled MERN stack developer?",
-      action: "Hire Me",
-      color: "text-green-600",
-      bgColor: "bg-green-50",
-      borderColor: "border-green-200",
-      icon: Code2,
-      href: "mailto:walmiki240@gmail.com?subject=Development Project&body=Hi Sumit, I have a project that needs...",
-    },
-    {
-      title: "Freelance Project?",
-      description: "Have a freelance opportunity in mind?",
-      action: "Discuss Project",
-      color: "text-orange-600",
-      bgColor: "bg-orange-50",
-      borderColor: "border-orange-200",
-      icon: Briefcase,
-      href: "mailto:walmiki240@gmail.com?subject=Freelance Project&body=Hi Sumit, I have a freelance opportunity...",
     },
   ]
 
@@ -262,144 +229,6 @@ export default function Contact() {
                   <ArrowRight
                     className={`w-4 h-4 transition-all duration-300 group-hover:translate-x-1 ${method.color}`}
                   />
-                </div>
-              </a>
-            ))}
-          </div>
-
-          {/* Contact Form */}
-          <div className="max-w-4xl mx-auto mb-16">
-            <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-professional-xl border border-slate-200">
-              <div className="text-center mb-8">
-                <h3 className="text-3xl font-bold text-slate-900 mb-2">Send me a message</h3>
-                <p className="text-slate-600 text-lg">I'd love to hear about your project. What's on your mind?</p>
-              </div>
-
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-semibold text-slate-700 mb-2">
-                      What should I call you? *
-                    </label>
-                    <Input
-                      id="name"
-                      name="name"
-                      type="text"
-                      required
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      placeholder="Your name"
-                      className="border-slate-300 focus:border-blue-500 focus:ring-blue-500"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-semibold text-slate-700 mb-2">
-                      How can I reach you? *
-                    </label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      required
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      placeholder="your.email@example.com"
-                      className="border-slate-300 focus:border-blue-500 focus:ring-blue-500"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-semibold text-slate-700 mb-2">
-                    What's this about? *
-                  </label>
-                  <Input
-                    id="subject"
-                    name="subject"
-                    type="text"
-                    required
-                    value={formData.subject}
-                    onChange={handleInputChange}
-                    placeholder="Project collaboration, job opportunity, or just saying hi!"
-                    className="border-slate-300 focus:border-blue-500 focus:ring-blue-500"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-semibold text-slate-700 mb-2">
-                    Tell me about your project *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={5}
-                    required
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    placeholder="Tell me about your project, timeline, budget, or any specific requirements. The more details, the better I can help!"
-                    className="w-full border border-slate-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none"
-                  />
-                </div>
-
-                <Button
-                  type="submit"
-                  disabled={formStatus.type === "loading"}
-                  className="w-full gradient-primary text-white py-4 rounded-lg font-semibold text-lg shadow-professional-lg disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {formStatus.type === "loading" ? (
-                    <>
-                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-3"></div>
-                      Sending your message...
-                    </>
-                  ) : (
-                    <>
-                      <Send className="w-5 h-5 mr-3" />
-                      Send Message
-                    </>
-                  )}
-                </Button>
-
-                {formStatus.type !== "idle" && formStatus.type !== "loading" && (
-                  <div
-                    className={`p-4 rounded-lg ${
-                      formStatus.type === "success"
-                        ? "bg-green-50 text-green-800 border border-green-200"
-                        : "bg-red-50 text-red-800 border border-red-200"
-                    }`}
-                  >
-                    <div className="flex items-center">
-                      {formStatus.type === "success" ? (
-                        <CheckCircle className="w-5 h-5 mr-2" />
-                      ) : (
-                        <AlertCircle className="w-5 h-5 mr-2" />
-                      )}
-                      {formStatus.message}
-                    </div>
-                  </div>
-                )}
-              </form>
-            </div>
-          </div>
-
-          {/* CTA Options */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-            {ctaOptions.map((cta, index) => (
-              <a
-                key={cta.title}
-                href={cta.href}
-                className={`group ${cta.bgColor} ${cta.borderColor} border-2 rounded-xl p-8 card-hover ${isVisible ? "animate-scale-in" : "opacity-0"}`}
-                style={{ animationDelay: `${600 + index * 100}ms` }}
-              >
-                <div className="bg-white p-4 rounded-xl shadow-professional mb-6 inline-flex group-hover:scale-110 transition-transform">
-                  <cta.icon className={`w-6 h-6 ${cta.color}`} />
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">{cta.title}</h3>
-                <p className="text-slate-600 mb-6 leading-relaxed">{cta.description}</p>
-                <div
-                  className={`flex items-center ${cta.color} font-semibold group-hover:text-slate-900 transition-colors`}
-                >
-                  <span>{cta.action}</span>
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </div>
               </a>
             ))}
