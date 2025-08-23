@@ -40,15 +40,14 @@ export default function Hero() {
       color: "text-yellow-600",
       bg: "bg-yellow-100",
     },
-    { name: "Python", icon: "🐍", color: "text-green-600", bg: "bg-green-100" },
+    { name: "Next.JS", icon: "🖥️", color: "text-pink-600", bg: "bg-pink-100" },
     { name: "React", icon: "⚛️", color: "text-blue-600", bg: "bg-blue-100" },
     {
-      name: "Node.js",
+      name: "API Development",
       icon: "🟢",
       color: "text-green-500",
       bg: "bg-green-100",
     },
-    { name: "AWS", icon: "☁️", color: "text-orange-500", bg: "bg-orange-100" },
     {
       name: "AI/ML",
       icon: "🤖",
@@ -242,7 +241,7 @@ export default function Hero() {
                       "Software Developer"
                     </span>
                     ,{"\n"} <span className="text-green-400">experience</span>:{" "}
-                    <span className="text-yellow-400">"4+ years"</span>,{"\n"}{" "}
+                    <span className="text-yellow-400">"5+ years"</span>,{"\n"}{" "}
                     <span className="text-green-400">specialties</span>: [{"\n"}{" "}
                     <span className="text-yellow-400">"React"</span>,{" "}
                     <span className="text-yellow-400">"Next.js"</span>,{" "}

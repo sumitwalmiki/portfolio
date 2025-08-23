@@ -109,18 +109,6 @@ export default function Contact() {
       primary: true,
     },
     {
-      id: "schedule",
-      icon: Calendar,
-      title: "Book a 15-min Call",
-      subtitle: "Quick consultation",
-      value: "Schedule now",
-      href: "https://calendly.com/walmiki240/30min",
-      color: "text-green-600",
-      bgColor: "bg-green-50",
-      borderColor: "border-green-200",
-      description: "Free consultation about your project",
-    },
-    {
       id: "collaborate",
       title: "Let's Collaborate",
       subtitle: "Write me an email",
@@ -131,6 +119,18 @@ export default function Contact() {
       borderColor: "border-orange-200",
       icon: User,
       description: "Ready to work together ?",
+    },
+    {
+      id: "schedule",
+      icon: Calendar,
+      title: "Book a 15-min Call",
+      subtitle: "Quick consultation",
+      value: "Schedule now",
+      href: "https://calendly.com/walmiki240/30min",
+      color: "text-green-600",
+      bgColor: "bg-green-50",
+      borderColor: "border-green-200",
+      description: "Free consultation about your project",
     },
   ]
 

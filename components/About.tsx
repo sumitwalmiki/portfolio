@@ -35,7 +35,7 @@ export default function About() {
   const highlights = [
     {
       icon: Code,
-      title: "4+ Years",
+      title: "5+ Years",
       subtitle: "Software Development",
       color: "text-blue-600",
       bgColor: "bg-blue-50",

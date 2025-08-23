@@ -242,10 +242,10 @@ export default function Blog() {
 								<div className="md:block">
                     <div className="p-8">
                       <div className="flex items-center space-x-2 mb-4">
-                        <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-medium">
+                        <span className="hidden sm:block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-medium">
                           Featured
                         </span>
-                        <span className="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-xs font-medium">
+                        <span className="ml-0 sm:ml-auto px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-xs font-medium">
                           {featuredPost.platform}
                         </span>
                         <div className="flex items-center space-x-4 text-sm text-slate-500">
@@ -291,11 +291,11 @@ export default function Blog() {
                         <div className="flex items-center space-x-4 text-sm text-slate-500">
                           <div className="flex items-center space-x-1">
                             <Eye className="w-4 h-4" />
-                            <span>{featuredPost.views} views</span>
+                            <span>{featuredPost.views}</span>
                           </div>
                           <div className="flex items-center space-x-1">
                             <TrendingUp className="w-4 h-4" />
-                            <span>{featuredPost.likes} likes</span>
+                            <span>{featuredPost.likes}</span>
                           </div>
                         </div>
 
@@ -384,11 +384,6 @@ export default function Blog() {
                         <span>{post.likes}</span>
 											</div>
 											
-										<div className="flex items-center space-x-1">
-											<span className="px-2 py-1 bg-white/90 text-slate-700 rounded-full text-xs font-medium">
-                      {post.category}
-                    </span>
-										</div>
 										<div className="flex items-center space-x-1">											
                     <span
                       className={`px-2 py-1 rounded-full text-xs font-medium ${

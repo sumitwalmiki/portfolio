@@ -35,7 +35,7 @@ export default function ChatWidget() {
     "Looking for your portfolio":
       "Great! You can explore my projects in the Projects section above. I've worked on healthcare analytics, e-commerce platforms, and educational websites. Which type of project interests you most?",
     "Just saying hello!":
-      "Hello there! 👋 Thanks for stopping by my portfolio. I'm Sumit, a MERN stack developer with 4+ years of experience. How can I help you today?",
+      "Hello there! 👋 Thanks for stopping by my portfolio. I'm Sumit, a MERN stack developer with 5+ years of experience. How can I help you today?",
     "Interested in mentorship":
       "That's wonderful! I'd love to help fellow developers grow. I can share insights about React, Next.js, Node.js, and career development. What specific area would you like guidance on?",
     "We'd like to hire you":
@@ -43,7 +43,7 @@ export default function ChatWidget() {
     "Tell me about your projects":
       "I've built various applications including healthcare analytics dashboards, e-commerce platforms like Amazon clone, streaming apps like Netflix clone, and educational websites. Each project showcases different aspects of modern web development. Which one would you like to know more about?",
     "What's your experience?":
-      "I have 4+ years of experience in MERN stack development. I specialize in React, Next.js, Node.js, and MongoDB. I've worked on healthcare analytics, e-commerce platforms, and educational websites. I'm passionate about creating scalable, high-performance applications.",
+      "I have 5+ years of experience in MERN stack development. I specialize in React, Next.js, Node.js, and MongoDB. I've worked on healthcare analytics, e-commerce platforms, and educational websites. I'm passionate about creating scalable, high-performance applications.",
   };
 
   useEffect(() => {
@@ -138,18 +138,9 @@ export default function ChatWidget() {
           <div className="h-full bg-white rounded-t-2xl sm:rounded-2xl shadow-professional-xl border border-slate-200 flex flex-col overflow-hidden">
             {/* Header */}
             <div className="gradient-primary text-white p-4 sm:p-6 flex items-center justify-between">
-              <div className="flex items-center space-x-3">
-                <div className="relative">
-                  <Image
-                    src="/placeholder.svg?height=40&width=40"
-                    alt="Sumit Bot"
-                    width={40}
-                    height={40}
-                    className="rounded-full ring-2 ring-white/30"
-                  />
-                  <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-400 rounded-full border-2 border-white"></div>
-                </div>
-                <div>
+              <div className="flex items-center">
+                <div className="flex justify-center items-center space-x-2">
+                  <div className="w-4 h-4 bg-green-400 rounded-full border-2 border-white"></div>
                   <h3 className="font-bold text-base sm:text-lg">Sumit Bot</h3>
                   <p className="text-xs sm:text-sm text-white/80 flex items-center">
                     <Code2 className="w-3 h-3 mr-1" />

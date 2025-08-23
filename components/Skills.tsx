@@ -18,15 +18,15 @@ export default function Skills() {
 				borderColor: "border-blue-200",
 				description: "Building modern, responsive user interfaces",
 				skills: [
-					{ name: "ReactJS", version: "18.x", description: "Component-based UI library", experience: "4+ years" },
+					{ name: "ReactJS", version: "18.x", description: "Component-based UI library", experience: "5+ years" },
 					{ name: "Next.js", version: "14.x", description: "Full-stack React framework", experience: "3+ years" },
 					{ name: "Redux", version: "4.x", description: "State management library", experience: "3+ years" },
-					{ name: "JavaScript", version: "ES6+", description: "Modern JavaScript features", experience: "4+ years" },
-					{ name: "HTML5", version: "5.0", description: "Semantic markup language", experience: "4+ years" },
-					{ name: "CSS3", version: "3.0", description: "Modern styling capabilities", experience: "4+ years" },
+					{ name: "JavaScript", version: "ES6+", description: "Modern JavaScript features", experience: "5+ years" },
+					{ name: "HTML5", version: "5.0", description: "Semantic markup language", experience: "5+ years" },
+					{ name: "CSS3", version: "3.0", description: "Modern styling capabilities", experience: "5+ years" },
 					{ name: "SCSS", version: "1.x", description: "CSS preprocessor", experience: "3+ years" },
 					{ name: "Tailwind", version: "3.x", description: "Utility-first CSS framework", experience: "2+ years" },
-					{ name: "Bootstrap", version: "5.x", description: "CSS component framework", experience: "4+ years" },
+					{ name: "Bootstrap", version: "5.x", description: "CSS component framework", experience: "5+ years" },
 				],
 				command: "npm install react next redux tailwindcss",
 			},
@@ -38,10 +38,10 @@ export default function Skills() {
 				borderColor: "border-green-200",
 				description: "Server-side development and database management",
 				skills: [
-					{ name: "NodeJS", version: "18.x", description: "JavaScript runtime environment", experience: "4+ years" },
-					{ name: "ExpressJS", version: "4.x", description: "Web application framework", experience: "4+ years" },
-					{ name: "MongoDB", version: "6.x", description: "NoSQL document database", experience: "4+ years" },
-					{ name: "NoSQL", version: "—", description: "Non-relational databases", experience: "4+ years" },
+					{ name: "NodeJS", version: "18.x", description: "JavaScript runtime environment", experience: "2+ years" },
+					{ name: "ExpressJS", version: "4.x", description: "Web application framework", experience: "1+ years" },
+					{ name: "MongoDB", version: "6.x", description: "NoSQL document database", experience: "1+ years" },
+					{ name: "NoSQL", version: "—", description: "Non-relational databases", experience: "1+ years" },
 					{ name: "MySQL", version: "8.x", description: "Relational database system", experience: "3+ years" },
 					{ name: "Firebase", version: "9.x", description: "Backend-as-a-Service platform", experience: "3+ years" },
 				],
@@ -56,8 +56,8 @@ export default function Skills() {
 				description: "Development tools and productivity frameworks",
 				skills: [
 					{ name: "Webpack", version: "5.x", description: "Module bundler", experience: "3+ years" },
-					{ name: "GitHub", version: "—", description: "Version control platform", experience: "4+ years" },
-					{ name: "Git", version: "2.x", description: "Distributed version control", experience: "4+ years" },
+					{ name: "GitHub", version: "—", description: "Version control platform", experience: "5+ years" },
+					{ name: "Git", version: "2.x", description: "Distributed version control", experience: "5+ years" },
 					{ name: "Amazon QuickSight", version: "—", description: "Business analytics service", experience: "2+ years" },
 					{ name: "Highcharts", version: "10.x", description: "Interactive charting library", experience: "2+ years" },
 					{ name: "Google Analytics", version: "GA4", description: "Web analytics service", experience: "3+ years" },
@@ -74,7 +74,7 @@ export default function Skills() {
 				borderColor: "border-orange-200",
 				description: "API development and third-party integrations",
 				skills: [
-					{ name: "REST APIs", version: "—", description: "RESTful web services", experience: "4+ years" },
+					{ name: "REST APIs", version: "—", description: "RESTful web services", experience: "2+ years" },
 					{ name: "Firebase APIs", version: "9.x", description: "Firebase service APIs", experience: "3+ years" },
 				],
 				command: "# RESTful API development with Express and Firebase",
@@ -85,7 +85,7 @@ export default function Skills() {
 		const currentlyExploring = [
 			{ name: "AI Integration", icon: "🤖", color: "bg-purple-50 border-purple-200 text-purple-700" },
 			{ name: "Advanced Frontend Architecture", icon: "☸️", color: "bg-blue-50 border-blue-200 text-blue-700" },
-			{ name: "System Design", icon: "🦀", color: "bg-orange-50 border-orange-200 text-orange-700" },
+			// { name: "System Design", icon: "🦀", color: "bg-orange-50 border-orange-200 text-orange-700" },
 		]
 	
 		useEffect(() => {
@@ -194,8 +194,8 @@ export default function Skills() {
 										<div className="text-slate-400 text-xs font-mono space-y-1">
 											<div>{"{"}</div>
 											<div className="ml-2">"name": "sumit-skills",</div>
-											<div className="ml-2">"version": "4.0.0",</div>
-											<div className="ml-2">"experience": "4+ years"</div>
+											<div className="ml-2">"version": "5.0.0",</div>
+											<div className="ml-2">"experience": "5+ years"</div>
 											<div>{"}"}</div>
 										</div>
 									</div>
@@ -277,20 +277,6 @@ export default function Skills() {
 									</div>
 								</div>
 							</div>
-						</div>
-	
-						{/* Stats Footer */}
-						<div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
-							{Object.entries(skillCategories).map(([key, category]) => (
-								<div
-									key={key}
-									className={`${category.bgColor} ${category.borderColor} border-2 rounded-xl p-4 text-center transition-all duration-300 hover:shadow-lg`}
-								>
-									<category.icon className={`w-8 h-8 ${category.color} mx-auto mb-2`} />
-									<div className="font-bold text-slate-900">{category.skills.length}</div>
-									<div className="text-slate-600 text-sm">{category.title.split(" ")[0]} Skills</div>
-								</div>
-							))}
 						</div>
 						
 						{/* Currently Exploring */}

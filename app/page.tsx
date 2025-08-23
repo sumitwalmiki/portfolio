@@ -12,7 +12,7 @@ import ChatWidget from "@/components/ChatWidget"
 export const metadata: Metadata = {
   title: "Sumit Walmiki - Full-Stack Software Engineer | React, Node.js, Python, Cloud",
   description:
-    "Experienced Full-Stack Software Engineer with 4+ years building scalable web applications. Expertise in JavaScript, Python, React, Node.js, and cloud technologies. Open to opportunities at top tech companies.",
+    "Experienced Full-Stack Software Engineer with 5+ years building scalable web applications. Expertise in JavaScript, Python, React, Node.js, and cloud technologies. Open to opportunities at top tech companies.",
   keywords:
     "Full-Stack Developer, Software Engineer, JavaScript, Python, React, Node.js, AWS, System Design, Web Development, Tech Jobs, Google, Meta, FAANG",
   authors: [{ name: "Sumit Walmiki" }],

@@ -187,17 +187,6 @@ export default function Recommendations() {
                 {/* Author */}
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-3">
-                    <div className="relative">
-                      <Image
-                        src={recommendation.avatar || "/placeholder.svg"}
-                        alt={recommendation.name}
-                        width={48}
-                        height={48}
-                        className="rounded-full border-2 border-white shadow-lg"
-                        loading="lazy"
-                      />
-                      <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white"></div>
-                    </div>
                     <div>
                       <h4 className="font-semibold text-slate-900">
                         {recommendation.name}
