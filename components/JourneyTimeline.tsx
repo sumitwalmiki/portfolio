@@ -126,14 +126,6 @@ export default function JourneyTimeline({ milestones }: JourneyTimelineProps) {
   // Desktop: Horizontal Timeline
   return (
     <div className="w-full flex flex-col items-center">
-      {/* Desktop Timeline Header */}
-      <div className="text-center mb-8">
-        <div className="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full border border-blue-200 shadow-sm">
-          <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
-          <span className="text-sm font-medium text-blue-700">Career Timeline</span>
-        </div>
-      </div>
-
       <div
         className="flex w-full justify-start items-start gap-8 relative overflow-x-auto snap-x snap-mandatory hide-scrollbar overflow-visible p-6"
         style={{ WebkitOverflowScrolling: "touch" }}
