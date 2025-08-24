@@ -215,29 +215,65 @@ export default function About() {
           </div>
 
           {/* Tabbed Content */}
-          <div className="max-w-5xl mx-auto">
-            {/* Tab Navigation */}
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-              {tabs.map((tab) => (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
-                  className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
-                    activeTab === tab.id
-                      ? "gradient-primary text-white shadow-professional-lg"
-                      : "bg-white border border-slate-200 hover:border-slate-300 text-slate-700 shadow-professional"
-                  }`}
-                >
-                  <tab.icon className="w-5 h-5" />
-                  <span>{tab.label}</span>
-                </button>
-              ))}
+          <div className="mx-auto">
+            {/* Enhanced Tab Navigation - Horizontal Scrollable */}
+            <div className="mb-10">
+              {/* Desktop View */}
+              <div className="hidden sm:flex justify-center gap-4">
+                {tabs.map((tab) => (
+                  <button
+                    key={tab.id}
+                    onClick={() => setActiveTab(tab.id)}
+                    className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
+                      activeTab === tab.id
+                        ? "gradient-primary text-white shadow-professional-lg"
+                        : "bg-white border border-slate-200 hover:border-slate-300 text-slate-700 shadow-professional"
+                    }`}
+                  >
+                    <tab.icon className="w-5 h-5" />
+                    <span>{tab.label}</span>
+                  </button>
+                ))}
+              </div>
+
+              {/* Mobile View - Horizontal Scrollable */}
+              <div className="sm:hidden">
+                <div className="flex space-x-3 overflow-x-auto pb-2 px-1 scrollbar-hide">
+                  {tabs.map((tab) => (
+                    <button
+                      key={tab.id}
+                      onClick={() => setActiveTab(tab.id)}
+                      className={`flex items-center space-x-2 px-4 py-3 rounded-lg font-medium transition-all duration-300 whitespace-nowrap flex-shrink-0 ${
+                        activeTab === tab.id
+                          ? "gradient-primary text-white shadow-professional-lg"
+                          : "bg-white border border-slate-200 text-slate-700 shadow-professional"
+                      }`}
+                    >
+                      <tab.icon className="w-4 h-4" />
+                    </button>
+                  ))}
+                </div>
+
+                {/* Scroll Indicator */}
+                <div className="flex justify-center mt-2">
+                  <div className="flex space-x-1">
+                    {tabs.map((tab) => (
+                      <div
+                        key={tab.id}
+                        className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                          activeTab === tab.id ? "bg-blue-600" : "bg-slate-300"
+                        }`}
+                      />
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Tab Content */}
-            <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-professional-xl border border-slate-200">
+            <div className="p-8 lg:p-12">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
-                  {activeTab === "journey" && viewportWidth !== null && viewportWidth > 996 ? (
+                  {activeTab === "journey" ? (
                     <div className="col-span-2">
                       <JourneyTimeline milestones={journeyMilestones} />
                     </div>
