@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     siteName: "Sumit Walmiki Portfolio",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/avatar.png",
         width: 1200,
         height: 630,
         alt: "Sumit Walmiki - Full-Stack Software Engineer",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     title: "Sumit Walmiki - Full-Stack Software Engineer",
     description:
       "Building scalable, high-performance applications with modern technologies.",
-    images: ["/og-image.jpg"],
+    images: ["/avatar.png"],
     creator: "@sumitwalmiki",
   },
   robots: {
@@ -57,10 +57,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  verification: {
-    google: "your-google-verification-code",
-  },
-  generator: "v0.dev",
 };
 
 export const viewport = {
