@@ -15,9 +15,12 @@ export const metadata: Metadata = {
   description:
     "Experienced Full-Stack Software Engineer with 5+ years building scalable web applications. Expertise in JavaScript, Python, React, Node.js, and cloud technologies. Open to opportunities at top tech companies.",
   keywords:
-    "Full-Stack Developer, Software Engineer, JavaScript, Python, React, Node.js, AWS, System Design, Web Development, Tech Jobs, Google, Meta, FAANG",
+    "Full-Stack Developer, Software Engineer, JavaScript, React, Node.js, System Design, Web Development, Tech Jobs, Google, Meta, FAANG",
   authors: [{ name: "Sumit Walmiki" }],
   metadataBase: new URL('https://sumitwalmiki.vercel.app'),
+  icons: {
+    icon: '/favicon.ico',
+  },
   openGraph: {
     title: "Sumit Walmiki - Full-Stack Software Engineer",
     description:
