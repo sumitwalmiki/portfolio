@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-import { useRef, useEffect, useState } from "react"
+import { useRef, useEffect, useState, useLayoutEffect } from "react"
 
 interface Milestone {
   year: string
@@ -18,7 +18,21 @@ interface JourneyTimelineProps {
 
 export default function JourneyTimeline({ milestones }: JourneyTimelineProps) {
   const currentYearRef = useRef<HTMLDivElement | null>(null)
+  const containerRef = useRef<HTMLDivElement | null>(null);
   const [isMobile, setIsMobile] = useState(false)
+
+  useLayoutEffect(() => {
+  if (containerRef.current && currentYearRef.current) {
+    const container = containerRef.current;
+    const current = currentYearRef.current;
+
+    // Calculate scroll position to center the current year
+    const offset =
+      current.offsetLeft - container.offsetWidth / 2 + current.offsetWidth / 2;
+
+    container.scrollLeft = offset; // <-- set initial position
+  }
+}, []);
 
   useEffect(() => {
     const checkMobile = () => {
@@ -29,12 +43,6 @@ export default function JourneyTimeline({ milestones }: JourneyTimelineProps) {
     window.addEventListener("resize", checkMobile)
     return () => window.removeEventListener("resize", checkMobile)
   }, [])
-
-  useEffect(() => {
-    if (currentYearRef.current && !isMobile) {
-      currentYearRef.current.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" })
-    }
-  }, [isMobile])
 
   if (isMobile) {
     // Mobile: Vertical Timeline
@@ -127,6 +135,7 @@ export default function JourneyTimeline({ milestones }: JourneyTimelineProps) {
   return (
     <div className="w-full flex flex-col items-center">
       <div
+        ref={containerRef}
         className="flex w-full justify-start items-start gap-8 relative overflow-x-auto snap-x snap-mandatory hide-scrollbar overflow-visible p-6"
         style={{ WebkitOverflowScrolling: "touch" }}
       >
