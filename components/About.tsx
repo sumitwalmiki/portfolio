@@ -218,27 +218,9 @@ export default function About() {
           <div className="mx-auto">
             {/* Enhanced Tab Navigation - Horizontal Scrollable */}
             <div className="mb-10">
-              {/* Desktop View */}
-              <div className="hidden sm:flex justify-center gap-4">
-                {tabs.map((tab) => (
-                  <button
-                    key={tab.id}
-                    onClick={() => setActiveTab(tab.id)}
-                    className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
-                      activeTab === tab.id
-                        ? "gradient-primary text-white shadow-professional-lg"
-                        : "bg-white border border-slate-200 hover:border-slate-300 text-slate-700 shadow-professional"
-                    }`}
-                  >
-                    <tab.icon className="w-5 h-5" />
-                    <span>{tab.label}</span>
-                  </button>
-                ))}
-              </div>
-
               {/* Mobile View - Horizontal Scrollable */}
-              <div className="sm:hidden">
-                <div className="flex space-x-3 overflow-x-auto pb-2 px-1 scrollbar-hide">
+              <div className="sm:flex justify-center flex-col items-center">
+                <div className="flex space-x-3 overflow-x-auto pb-2 px-1 hide-scrollbar">
                   {tabs.map((tab) => (
                     <button
                       key={tab.id}
@@ -250,12 +232,13 @@ export default function About() {
                       }`}
                     >
                       <tab.icon className="w-4 h-4" />
+                      <span>{tab.label}</span>
                     </button>
                   ))}
                 </div>
 
                 {/* Scroll Indicator */}
-                <div className="flex justify-center mt-2">
+                <div className="flex sm:hidden justify-center mt-2">
                   <div className="flex space-x-1">
                     {tabs.map((tab) => (
                       <div
