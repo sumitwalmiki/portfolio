@@ -177,7 +177,7 @@ export default function About() {
       {/* Subtle Background */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-slate-100 rounded-full blur-3xl opacity-30"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-50 rounded-full blur-3xl opacity-30"></div>
-
+      
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
           className={`transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
@@ -254,35 +254,42 @@ export default function About() {
             </div>
 
             {/* Tab Content */}
-            <div className="p-8 lg:p-12">
+            <div className={activeTab === "journey" ? "":"p-8 lg:p-12"}>
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                   {activeTab === "journey" ? (
-                    <div className="col-span-2">
+                    <div className="col-span-2 bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl md:rounded-3xl p-4 md:p-8 lg:p-12 shadow-professional-xl border border-slate-200 overflow-hidden">
                       <JourneyTimeline milestones={journeyMilestones} />
                     </div>
                   ) : (
-                    <>
-                      {(tabContent[activeTab as keyof typeof tabContent]?.title && tabContent[activeTab as keyof typeof tabContent]?.content) &&<div className="space-y-6">
-                        <h3 className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-bold text-slate-900 mb-4">
+                    <div className="col-span-2  bg-white rounded-2xl p-6 md:p-8 lg:p-12 shadow-professional-xl border border-slate-200">
+                      <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+                  {tabContent[activeTab as keyof typeof tabContent]?.title &&
+                    tabContent[activeTab as keyof typeof tabContent]?.content && (
+                      <div className="space-y-6">
+                        <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-slate-900 mb-4">
                           {tabContent[activeTab as keyof typeof tabContent]?.title}
                         </h3>
-                        <p className="text-lg text-slate-600 leading-relaxed">
+                        <p className="text-base md:text-lg text-slate-600 leading-relaxed">
                           {tabContent[activeTab as keyof typeof tabContent]?.content}
                         </p>
-                      </div>}
-                      <div className="space-y-4">
-                        {tabContent[activeTab as keyof typeof tabContent]?.points.map((point, index) => (
-                          <div
-                            key={index}
-                            className={`flex items-start space-x-3 p-4 bg-slate-50 rounded-xl border border-slate-200 card-hover ${isVisible ? "animate-slide-in-right" : "opacity-0"}`}
-                            style={{ animationDelay: `${index * 100}ms` }}
-                          >
-                            <div className="text-2xl flex-shrink-0">{point.split(" ")[0]}</div>
-                            <p className="text-slate-700 font-medium">{point.substring(point.indexOf(" ") + 1)}</p>
-                          </div>
-                        ))}
                       </div>
-                    </>
+                    )}
+                  <div className="space-y-4">
+                    {tabContent[activeTab as keyof typeof tabContent]?.points.map((point, index) => (
+                      <div
+                        key={index}
+                        className={`flex items-start space-x-3 p-4 bg-slate-50 rounded-xl border border-slate-200 card-hover ${isVisible ? "animate-slide-in-right" : "opacity-0"}`}
+                        style={{ animationDelay: `${index * 100}ms` }}
+                      >
+                        <div className="text-xl md:text-2xl flex-shrink-0">{point.split(" ")[0]}</div>
+                        <p className="text-sm md:text-base text-slate-700 font-medium">
+                          {point.substring(point.indexOf(" ") + 1)}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                    </div>
                   )}
                 </div>
             </div>

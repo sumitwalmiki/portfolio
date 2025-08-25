@@ -133,7 +133,7 @@ export default function JourneyTimeline({ milestones }: JourneyTimelineProps) {
         {/* Enhanced Timeline Line */}
         <div
           className="absolute top-16 h-2 bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 z-0 overflow-hidden rounded-full shadow-sm"
-          style={{ left: "160px", right: "-890px", top: "103px" }}
+          style={{ left: "160px", right: "-915px", top: "103px" }}
         >
           <div
             className="w-full h-full animate-pulse bg-gradient-to-r from-transparent via-blue-300/60 to-transparent rounded-full"
