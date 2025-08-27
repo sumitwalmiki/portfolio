@@ -10,12 +10,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title:
-    "Sumit Walmiki - Full-Stack Software Engineer | React, Node.js, Python, Cloud",
+  title: "Sumit Walmiki - ReactJS | Next.js | API | 5+ Years in Frontend & Full-Stack Development",
   description:
-    "Experienced Full-Stack Software Engineer with 5+ years building scalable web applications. Expertise in JavaScript, Python, React, Node.js, and cloud technologies. Open to opportunities at top tech companies.",
+    "Experienced Full-Stack Software Engineer with experience building scalable web applications. Expertise in JavaScript, React, NextJS, and API Development. Open to opportunities at top tech companies.",
   keywords:
-    "Full-Stack Developer, Software Engineer, JavaScript, React, Node.js, System Design, Web Development, Tech Jobs, Google, Meta, FAANG",
+    "Full-Stack Developer, Software Engineer, JavaScript, NextJS, React, Node.js, API, System Design, Web Development, Tech Jobs, Google, Meta, FAANG",
   authors: [{ name: "Sumit Walmiki" }],
   metadataBase: new URL('https://sumitwalmiki.vercel.app'),
   icons: {
