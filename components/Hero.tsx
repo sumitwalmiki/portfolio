@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import {
   ArrowRight,
-  Play,
   Code2,
   Zap,
   Award,
@@ -11,11 +10,13 @@ import {
   Cpu,
   Database,
   Globe,
+  Calendar,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import DownloadResumeButton from "@/ui/components/DownloadResumeButton";
 
 export default function Hero() {
+
   const [isVisible, setIsVisible] = useState(false);
   const [currentTech, setCurrentTech] = useState(0);
   const [typedText, setTypedText] = useState("");
@@ -195,11 +196,11 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-2 xxs:gap-4">
               <Button
                 size="lg"
-                onClick={() => handleNavClick("#projects")}
+                onClick={() => window.open("https://calendly.com/walmiki240/30min", "_blank")}
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 xxs:px-8 py-3 xxs:py-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group text-sm xxs:text-base"
               >
-                <Play className="w-4 xxs:w-5 h-4 xxs:h-5 mr-2 group-hover:scale-110 transition-transform" />
-                View My Work
+                <Calendar className="w-4 xxs:w-5 h-4 xxs:h-5 mr-2 group-hover:scale-110 transition-transform" />
+                Let's Talk
                 <ArrowRight className="w-4 xxs:w-5 h-4 xxs:h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
               <DownloadResumeButton />

@@ -124,13 +124,6 @@ export default function Header() {
                 </a>
               ))}
             </div>
-            <div className="w-px h-6 bg-slate-300"></div>
-            <Button
-              onClick={() => handleNavClick("#contact")}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200"
-            >
-              Let's Talk
-            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -148,7 +141,7 @@ export default function Header() {
         {/* Mobile Menu */}
         <div
           className={`lg:hidden transition-all duration-300 ease-in-out ${
-            isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0 pointer-events-none"
+            isMenuOpen ? "opacity-100" : "max-h-0 opacity-0 pointer-events-none"
           } overflow-hidden`}
         >
           <div className="py-4 space-y-2 bg-white/95 backdrop-blur-md rounded-b-xl border-t border-slate-200">
@@ -183,13 +176,6 @@ export default function Header() {
                   </a>
                 ))}
               </div>
-              <Button
-                onClick={() => handleNavClick("#contact")}
-                size="sm"
-                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg"
-              >
-                Contact
-              </Button>
             </div>
           </div>
         </div>

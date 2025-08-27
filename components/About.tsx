@@ -254,7 +254,6 @@ export default function About() {
             </div>
 
             {/* Tab Content */}
-            <div className={activeTab === "journey" ? "":"p-8 lg:p-12"}>
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                   {activeTab === "journey" ? (
                     <div className="col-span-2 bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl md:rounded-3xl p-4 md:p-8 lg:p-12 shadow-professional-xl border border-slate-200 overflow-hidden">
@@ -292,7 +291,6 @@ export default function About() {
                     </div>
                   )}
                 </div>
-            </div>
           </div>
         </div>
       </div>
