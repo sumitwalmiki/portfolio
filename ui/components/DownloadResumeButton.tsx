@@ -4,14 +4,9 @@ import { Download } from "lucide-react";
 
 const DownloadResumeButton: React.FC = () => {
   const handleDownloadAndOpen = () => {
-    const url = "SumitWalmikiResume.pdf";
+    const url =
+      "https://1drv.ms/b/c/172fc6365e35151d/IQBNgYUu-oiNRYYrTuzzFxF0Acky6HHUqKpd87zJU2kL-l8?e=f11mIZ";
     window.open(url, "_blank", "noopener,noreferrer");
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = "SumitWalmikiResume.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
   };
 
   return (
